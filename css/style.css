@@ -17334,6 +17334,183 @@ html.dark-mode .legalease-register-logo img {
     content: url("../images/logo-light.png");
 }
 
+/************************************************************Rtl mode**********************************************************************/
+
+/* ==========================================
+   RTL - PROCESS LINE ONLY
+   Circle position unchanged
+   ========================================== */
+
+html[dir="rtl"] .legalease-process-steps::before {
+    left: auto !important;
+    right: 31px !important;
+}
+
+/* ==========================================
+   RTL - HELP STEPS LINE
+   Keep circles exactly where they are
+   Move only the vertical line
+   ========================================== */
+
+html[dir="rtl"] .legalease-about-help-steps::before {
+    left: auto !important;
+    right: 20px !important;
+}
+
+/* =========================================================
+   LOGIN & REGISTER CARD - RTL ONLY
+   Controls are NOT affected
+   ========================================================= */
+
+/* =========================
+   LOGIN CARD
+   ========================= */
+
+html[dir="rtl"] .legalease-login-card {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-login-card .legalease-login-heading {
+    text-align: center;
+}
+
+html[dir="rtl"] .legalease-login-card .legalease-login-form {
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-login-card .legalease-login-field {
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-login-card .legalease-login-field label {
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-login-card .legalease-login-field input {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Password eye stays on the opposite side */
+html[dir="rtl"] .legalease-login-card .legalease-login-password-wrap input {
+    padding-right: 15px !important;
+    padding-left: 45px !important;
+}
+
+html[dir="rtl"] .legalease-login-card .legalease-login-password-toggle {
+    right: auto !important;
+    left: 13px !important;
+}
+
+/* Remember + Forgot Password */
+html[dir="rtl"] .legalease-login-card .legalease-login-options {
+    direction: rtl;
+}
+
+html[dir="rtl"] .legalease-login-card .legalease-login-remember {
+    flex-direction: row;
+}
+
+html[dir="rtl"] .legalease-login-card .legalease-login-options>a {
+    text-align: left;
+}
+
+/* Login button text */
+html[dir="rtl"] .legalease-login-card .legalease-login-button {
+    direction: rtl;
+}
+
+/* Divider remains centered */
+html[dir="rtl"] .legalease-login-card .legalease-login-divider {
+    direction: ltr;
+}
+
+/* Social icons remain normal */
+html[dir="rtl"] .legalease-login-card .legalease-login-socials {
+    direction: ltr;
+}
+
+/* Register link at bottom */
+html[dir="rtl"] .legalease-login-card .legalease-login-register {
+    direction: rtl;
+    text-align: center;
+}
+
+
+/* =========================
+   REGISTER CARD
+   ========================= */
+
+html[dir="rtl"] .legalease-register-card {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-register-card .legalease-register-heading {
+    text-align: center;
+}
+
+html[dir="rtl"] .legalease-register-card .legalease-register-form {
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-register-card .legalease-register-field {
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-register-card .legalease-register-field label {
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-register-card .legalease-register-field input {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Password eye */
+html[dir="rtl"] .legalease-register-card .legalease-register-password-wrap input {
+    padding-right: 15px !important;
+    padding-left: 45px !important;
+}
+
+html[dir="rtl"] .legalease-register-card .legalease-register-password-toggle {
+    right: auto !important;
+    left: 13px !important;
+}
+
+/* Terms checkbox + text */
+html[dir="rtl"] .legalease-register-card .legalease-register-terms {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .legalease-register-card .legalease-register-terms input {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Create Account button */
+html[dir="rtl"] .legalease-register-card .legalease-register-button {
+    direction: rtl;
+}
+
+/* Divider remains centered */
+html[dir="rtl"] .legalease-register-card .legalease-register-divider {
+    direction: ltr;
+}
+
+/* Social icons remain normal */
+html[dir="rtl"] .legalease-register-card .legalease-register-socials {
+    direction: ltr;
+}
+
+/* Login link at bottom */
+html[dir="rtl"] .legalease-register-card .legalease-register-login {
+    direction: rtl;
+    text-align: center;
+}
+
 /*********************************************************Responsive***************************************************************************************/
 
 /* ==========================================

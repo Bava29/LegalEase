@@ -6566,6 +6566,545 @@ html.dark-mode .legalease-dashboard-menu-toggle:hover i {
     color: #FFFFFF !important;
 }
 
+/********************************************************Rtl mode****************************************************************************/
+
+/* =========================================================
+   DOWNLOADS TABLE - PROPER RTL
+   Table columns + content alignment
+   ========================================================= */
+
+html[dir="rtl"] .legalease-downloads-table {
+    direction: rtl;
+}
+
+/* Header alignment */
+html[dir="rtl"] .legalease-downloads-table thead th {
+    text-align: right !important;
+}
+
+/* Keep every column in its proper RTL position */
+html[dir="rtl"] .legalease-downloads-table th,
+html[dir="rtl"] .legalease-downloads-table td {
+    direction: rtl;
+}
+
+/* ---------------------------------------------------------
+   DOCUMENT
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .legalease-downloads-table th:nth-child(1),
+html[dir="rtl"] .legalease-downloads-table td:nth-child(1) {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-downloads-document {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    flex-direction: row;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-downloads-document>div {
+    text-align: right !important;
+}
+
+/* ---------------------------------------------------------
+   TYPE
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .legalease-downloads-table th:nth-child(2),
+html[dir="rtl"] .legalease-downloads-table td:nth-child(2) {
+    text-align: right !important;
+}
+
+/* ---------------------------------------------------------
+   COMPLETED DATE
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .legalease-downloads-table th:nth-child(3),
+html[dir="rtl"] .legalease-downloads-table td:nth-child(3) {
+    text-align: right !important;
+    direction: rtl;
+}
+
+/* Keep date text visually clean */
+html[dir="rtl"] .legalease-downloads-table td:nth-child(3) {
+    white-space: nowrap;
+}
+
+/* ---------------------------------------------------------
+   FILE
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .legalease-downloads-table th:nth-child(4),
+html[dir="rtl"] .legalease-downloads-table td:nth-child(4) {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-downloads-file {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    direction: ltr;
+}
+
+/* ---------------------------------------------------------
+   STATUS
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .legalease-downloads-table th:nth-child(5),
+html[dir="rtl"] .legalease-downloads-table td:nth-child(5) {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-downloads-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------------------------------------------
+   DOWNLOAD BUTTON
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .legalease-downloads-table th:nth-child(6),
+html[dir="rtl"] .legalease-downloads-table td:nth-child(6) {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-downloads-table td:nth-child(6) {
+    display: table-cell;
+}
+
+html[dir="rtl"] .legalease-download-button {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   RTL TABLE - FORCE COLUMN ORDER
+   Visual order:
+   Download | Status | File | Completed | Type | Document
+   ========================================================= */
+
+html[dir="rtl"] .legalease-downloads-table thead tr,
+html[dir="rtl"] .legalease-downloads-table tbody tr {
+    direction: rtl;
+}
+
+
+/* =========================================================
+   RTL - DOCUMENT CONTENT
+   ========================================================= */
+
+html[dir="rtl"] .legalease-downloads-document strong,
+html[dir="rtl"] .legalease-downloads-document small {
+    text-align: right !important;
+    direction: rtl;
+}
+
+
+/* =========================================================
+   RTL - TABLE ROW
+   ========================================================= */
+
+html[dir="rtl"] .legalease-downloads-table tbody tr {
+    text-align: right;
+}
+
+
+/* =========================================================
+   RTL - DOWNLOAD ICON
+   Keep icon centered, don't mirror it
+   ========================================================= */
+
+html[dir="rtl"] .legalease-download-button i {
+    direction: ltr;
+}
+
+
+/* =========================================================
+   MOBILE RTL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    html[dir="rtl"] .legalease-downloads-table td {
+        direction: rtl;
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-downloads-table td::before {
+        text-align: right !important;
+        order: 2;
+    }
+
+    html[dir="rtl"] .legalease-downloads-table td>* {
+        order: 1;
+    }
+
+    html[dir="rtl"] .legalease-downloads-document {
+        justify-content: flex-start !important;
+        max-width: 68%;
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-downloads-document>div {
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-downloads-file {
+        direction: ltr;
+    }
+
+    html[dir="rtl"] .legalease-download-button {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* =========================================================
+   DOCUMENT HISTORY - RTL TABLE ALIGNMENT
+   Keep columns in their proper positions
+   ========================================================= */
+
+html[dir="rtl"] .legalease-history-table {
+    direction: rtl !important;
+    text-align: right;
+}
+
+/* -----------------------------------------
+   ALL TABLE CELLS
+   ----------------------------------------- */
+
+html[dir="rtl"] .legalease-history-table th,
+html[dir="rtl"] .legalease-history-table td {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+
+/* -----------------------------------------
+   DOCUMENT
+   ----------------------------------------- */
+
+html[dir="rtl"] .legalease-history-document {
+    direction: rtl !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-history-document>span {
+    flex-shrink: 0;
+}
+
+html[dir="rtl"] .legalease-history-document>div {
+    text-align: right !important;
+}
+
+
+/* -----------------------------------------
+   ACTIVITY
+   ----------------------------------------- */
+
+html[dir="rtl"] .legalease-history-activity {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+
+/* -----------------------------------------
+   DOCUMENT TYPE
+   ----------------------------------------- */
+
+html[dir="rtl"] .legalease-history-table td:nth-child(3) {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+
+/* -----------------------------------------
+   DATE
+   ----------------------------------------- */
+
+html[dir="rtl"] .legalease-history-table td:nth-child(4) {
+    text-align: right !important;
+    direction: ltr !important;
+}
+
+
+/* -----------------------------------------
+   STATUS
+   ----------------------------------------- */
+
+html[dir="rtl"] .legalease-history-table td:nth-child(5) {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-history-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* -----------------------------------------
+   ACTION
+   ----------------------------------------- */
+
+html[dir="rtl"] .legalease-history-table td:nth-child(6) {
+    text-align: center !important;
+}
+
+html[dir="rtl"] .legalease-history-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+}
+
+html[dir="rtl"] .legalease-history-action i {
+    direction: ltr !important;
+}
+
+
+/* =========================================================
+   RTL COLUMN HEADER ALIGNMENT
+   ========================================================= */
+
+html[dir="rtl"] .legalease-history-table thead th {
+    text-align: right !important;
+}
+
+
+/* Action header + button stay centered */
+html[dir="rtl"] .legalease-history-table thead th:nth-child(6) {
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   MOBILE RTL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    html[dir="rtl"] .legalease-history-table {
+        direction: rtl !important;
+    }
+
+    html[dir="rtl"] .legalease-history-table td {
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-history-table td:nth-child(6) {
+        text-align: center !important;
+    }
+
+    html[dir="rtl"] .legalease-history-document {
+        justify-content: flex-start !important;
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-history-document>div {
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-history-activity {
+        justify-content: flex-start !important;
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-history-status {
+        justify-content: center;
+    }
+
+}
+
+/* =========================================================
+   DRAFTS TABLE - RTL COLUMN ALIGNMENT
+   Keep all columns in their proper RTL positions
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table {
+    direction: rtl !important;
+}
+
+
+/* =========================================================
+   TABLE HEADERS
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table th {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+
+/* Action header */
+html[dir="rtl"] .legalease-drafts-table th:nth-child(6) {
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   TABLE CELLS
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table td {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table td:nth-child(1) {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-document {
+    direction: rtl !important;
+    justify-content: flex-start !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-document>div {
+    text-align: right !important;
+}
+
+
+/* =========================================================
+   TYPE
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table td:nth-child(2) {
+    text-align: right !important;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table td:nth-child(3) {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-progress {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-progress>div:first-child {
+    justify-content: flex-start !important;
+    direction: rtl !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-progress-track {
+    direction: rtl !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-progress-track>span {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+
+/* =========================================================
+   LAST EDITED / DATE
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table td:nth-child(4) {
+    text-align: right !important;
+    direction: ltr !important;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table td:nth-child(5) {
+    text-align: center !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-status {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    direction: rtl !important;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+html[dir="rtl"] .legalease-drafts-table td:nth-child(6) {
+    text-align: center !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-action {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+}
+
+html[dir="rtl"] .legalease-drafts-table-action i {
+    direction: ltr !important;
+}
+
+
+/* =========================================================
+   MOBILE RTL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    html[dir="rtl"] .legalease-drafts-table {
+        direction: rtl !important;
+    }
+
+    html[dir="rtl"] .legalease-drafts-table th,
+    html[dir="rtl"] .legalease-drafts-table td {
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-drafts-table td:nth-child(5),
+    html[dir="rtl"] .legalease-drafts-table td:nth-child(6) {
+        text-align: center !important;
+    }
+
+    html[dir="rtl"] .legalease-drafts-table-document {
+        justify-content: flex-start !important;
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-drafts-table-document>div {
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .legalease-drafts-table-progress {
+        text-align: right !important;
+    }
+
+}
+
 /*****************************************************Responsive*******************************************************************/
 
 /* =========================================================
