@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="LegalEase - Simple and secure online legal document preparation.">
+
+    <title>LegalEase</title>
+
+    <!-- Google Font - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         DASHBOARD SIDEBAR
+    ====================================================== -->
+
+    <aside class="legalease-dashboard-sidebar" id="legalease-dashboard-sidebar">
+
+        <div class="legalease-dashboard-sidebar-inner">
+
+            <!-- Logo -->
+            <div class="legalease-dashboard-logo">
+
+                <a href="index.html">
+                    <img src="images/logo-light.png" alt="LegalEase">
+                </a>
+
+                <button type="button" class="legalease-dashboard-sidebar-close" id="legalease-dashboard-sidebar-close"
+                    aria-label="Close dashboard menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="legalease-dashboard-nav">
+
+                <span class="legalease-dashboard-nav-label">
+                    MAIN MENU
+                </span>
+
+                <a href="dashboard.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-pie-chart"></i>
+
+                    <span>Overview</span>
+
+                </a>
+
+
+                <a href="d2.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-regular fa-file-lines"></i>
+
+                    <span>My Documents</span>
+
+                </a>
+
+
+                <a href="d3.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-file-circle-plus"></i>
+
+                    <span>Create Document</span>
+
+                </a>
+
+
+                <a href="d4.html" class="legalease-dashboard-nav-link active">
+
+                    <i class="fa-regular fa-folder-open"></i>
+
+                    <span>Drafts</span>
+
+                </a>
+
+
+                <a href="d5.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <span>Document History</span>
+
+                </a>
+
+
+                <a href="d6.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <span>Downloads</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="legalease-dashboard-sidebar-bottom">
+
+                <div class="legalease-dashboard-sidebar-mobile-account">
+                    <div class="legalease-dashboard-sidebar-mobile-actions">
+                        <button type="button" class="legalease-dashboard-sidebar-icon" aria-label="Notifications">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <button type="button" class="legalease-dashboard-sidebar-icon" aria-label="Settings">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                    </div>
+
+                    <button type="button" class="legalease-dashboard-sidebar-profile">
+                        <span class="legalease-dashboard-profile-image">
+                            <img src="images/profile.jpg" alt="Regina">
+                        </span>
+                        <span class="legalease-dashboard-profile-info">
+                            <strong>Regina</strong>
+                            <small>My Account</small>
+                        </span>
+                    </button>
+                </div>
+
+                <button type="button" class="legalease-dashboard-logout" id="legalease-dashboard-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         DASHBOARD HEADER
+    ====================================================== -->
+
+    <header class="legalease-dashboard-header">
+
+        <div class="legalease-dashboard-header-left">
+
+            <!-- Mobile / Tablet Toggle -->
+            <button type="button" class="legalease-dashboard-menu-toggle" id="legalease-dashboard-menu-toggle"
+                aria-label="Open dashboard menu" aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="legalease-dashboard-header-title">
+
+                <span>LEGAL WORKSPACE</span>
+
+                <h1>My Drafts</h1>
+
+            </div>
+
+        </div>
+
+        <div class="legalease-dashboard-header-right">
+
+            <!-- Notifications -->
+            <button type="button" class="legalease-dashboard-header-icon" aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="legalease-dashboard-notification-badge">
+                    3
+                </span>
+
+            </button>
+
+
+            <!-- Settings -->
+            <button type="button" class="legalease-dashboard-header-icon" aria-label="Settings">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </button>
+
+
+            <!-- Dark Mode -->
+            <button type="button" class="legalease-dashboard-header-icon" id="legalease-dashboard-theme-toggle"
+                aria-label="Toggle dark mode" title="Dark Mode">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button" class="legalease-dashboard-header-icon" id="legalease-dashboard-rtl-toggle"
+                aria-label="Toggle RTL mode" title="RTL Mode">
+
+                <i class="fa-solid fa-right-left"></i>
+
+            </button>
+
+
+            <!-- Profile -->
+            <button type="button" class="legalease-dashboard-profile">
+
+                <span class="legalease-dashboard-profile-image">
+                    <img src="images/profile.jpg" alt="Regina">
+                </span>
+
+                <span class="legalease-dashboard-profile-info">
+                    <strong>Regina</strong>
+                    <small>My Account</small>
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="legalease-dashboard-sidebar-overlay" id="legalease-dashboard-sidebar-overlay">
+    </div>
+
+
+    <!-- =====================================================
+         LOGOUT CONFIRMATION POPUP
+    ====================================================== -->
+
+    <div class="legalease-dashboard-modal" id="legalease-dashboard-logout-modal" aria-hidden="true">
+
+        <div class="legalease-dashboard-modal-overlay" id="legalease-dashboard-modal-overlay">
+        </div>
+
+        <div class="legalease-dashboard-modal-card">
+
+            <div class="legalease-dashboard-modal-icon">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+
+            <h2>Logout?</h2>
+
+            <p>
+                Are you sure you want to logout from your
+                LegalEase workspace?
+            </p>
+
+            <div class="legalease-dashboard-modal-actions">
+
+                <button type="button" class="legalease-dashboard-modal-no" id="legalease-dashboard-logout-no">
+                    No
+                </button>
+
+                <button type="button" class="legalease-dashboard-modal-yes" id="legalease-dashboard-logout-yes">
+                    Yes, Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <main class="legalease-dashboard-main">
+
+
+        <!-- SECTION 1 : DRAFTS OVERVIEW -->
+        <section class="legalease-drafts-intro">
+
+            <div class="legalease-drafts-intro-content">
+
+                <span class="legalease-drafts-intro-label">
+                    SAVED DRAFTS
+                </span>
+
+                <h2>
+                    Continue where
+                    <span>you left off.</span>
+                </h2>
+
+                <p>
+                    Your unfinished legal documents are saved here so
+                    you can return to them, review your information and
+                    complete them whenever you're ready.
+                </p>
+
+                <a href="d3.html" class="legalease-drafts-create-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Create New Document
+                </a>
+
+            </div>
+
+
+            <div class="legalease-drafts-summary">
+
+                <div class="legalease-drafts-summary-icon">
+                    <i class="fa-solid fa-file-pen"></i>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Active Drafts</span>
+                </div>
+
+                <div class="legalease-drafts-summary-line"></div>
+
+                <div>
+                    <strong>48%</strong>
+                    <span>Average Progress</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 2 : CONTINUE YOUR DRAFTS -->
+        <section class="legalease-drafts-continue">
+
+            <div class="legalease-drafts-section-heading">
+
+                <div>
+                    <span>CONTINUE YOUR WORK</span>
+
+                    <h2>
+                        Pick up a saved draft.
+                    </h2>
+                </div>
+
+                <a href="d3.html">
+                    Start New
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="legalease-drafts-cards">
+
+
+                <!-- Draft Card 1 -->
+                <article class="legalease-draft-card">
+
+                    <div class="legalease-draft-card-top">
+
+                        <div class="legalease-draft-icon">
+                            <i class="fa-solid fa-scroll"></i>
+                        </div>
+
+                        <span class="legalease-draft-status">
+                            In Progress
+                        </span>
+
+                    </div>
+
+                    <div class="legalease-draft-card-content">
+
+                        <span>LAST WILL &amp; TESTAMENT</span>
+
+                        <h3>
+                            Personal Will
+                        </h3>
+
+                        <p>
+                            Continue adding your personal and
+                            beneficiary information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="legalease-draft-progress">
+
+                        <div class="legalease-draft-progress-info">
+                            <span>Preparation progress</span>
+                            <strong>65%</strong>
+                        </div>
+
+                        <div class="legalease-draft-progress-track">
+                            <span style="width:65%;"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="legalease-draft-card-footer">
+
+                        <small>
+                            Last edited Sep 20, 2026
+                        </small>
+
+                        <a href="d3.html">
+                            Continue
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Draft Card 2 -->
+                <article class="legalease-draft-card">
+
+                    <div class="legalease-draft-card-top">
+
+                        <div class="legalease-draft-icon">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+
+                        <span class="legalease-draft-status">
+                            In Progress
+                        </span>
+
+                    </div>
+
+                    <div class="legalease-draft-card-content">
+
+                        <span>POWER OF ATTORNEY</span>
+
+                        <h3>
+                            Property Authorization
+                        </h3>
+
+                        <p>
+                            Continue providing the details required
+                            for your document.
+                        </p>
+
+                    </div>
+
+
+                    <div class="legalease-draft-progress">
+
+                        <div class="legalease-draft-progress-info">
+                            <span>Preparation progress</span>
+                            <strong>35%</strong>
+                        </div>
+
+                        <div class="legalease-draft-progress-track">
+                            <span style="width:35%;"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="legalease-draft-card-footer">
+
+                        <small>
+                            Last edited Sep 18, 2026
+                        </small>
+
+                        <a href="d3.html">
+                            Continue
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Draft Card 3 -->
+                <article class="legalease-draft-card">
+
+                    <div class="legalease-draft-card-top">
+
+                        <div class="legalease-draft-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <span class="legalease-draft-status">
+                            In Progress
+                        </span>
+
+                    </div>
+
+                    <div class="legalease-draft-card-content">
+
+                        <span>AFFIDAVIT</span>
+
+                        <h3>
+                            Personal Affidavit
+                        </h3>
+
+                        <p>
+                            Complete the remaining information
+                            before reviewing your document.
+                        </p>
+
+                    </div>
+
+
+                    <div class="legalease-draft-progress">
+
+                        <div class="legalease-draft-progress-info">
+                            <span>Preparation progress</span>
+                            <strong>20%</strong>
+                        </div>
+
+                        <div class="legalease-draft-progress-track">
+                            <span style="width:20%;"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="legalease-draft-card-footer">
+
+                        <small>
+                            Last edited Sep 16, 2026
+                        </small>
+
+                        <a href="d3.html">
+                            Continue
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 3 : ALL DRAFTS -->
+        <section class="legalease-drafts-list-section">
+
+            <div class="legalease-drafts-section-heading">
+
+                <div>
+                    <span>DRAFT LIBRARY</span>
+
+                    <h2>
+                        All saved drafts.
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="legalease-drafts-table-wrap">
+
+                <table class="legalease-drafts-table">
+
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Type</th>
+                            <th>Progress</th>
+                            <th>Last Edited</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-drafts-table-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-scroll"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Personal Will</strong>
+                                        <small>LE-D102</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Last Will &amp; Testament</td>
+
+                            <td>
+                                <div class="legalease-drafts-table-progress">
+
+                                    <div>
+                                        <span>65%</span>
+                                    </div>
+
+                                    <div class="legalease-drafts-table-progress-track">
+                                        <span style="width:65%;"></span>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Sep 20, 2026</td>
+
+                            <td>
+                                <span class="legalease-drafts-table-status">
+                                    In Progress
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="d3.html" class="legalease-drafts-table-action">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-drafts-table-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-file-signature"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Property Authorization</strong>
+                                        <small>LE-D099</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Power of Attorney</td>
+
+                            <td>
+                                <div class="legalease-drafts-table-progress">
+
+                                    <div>
+                                        <span>35%</span>
+                                    </div>
+
+                                    <div class="legalease-drafts-table-progress-track">
+                                        <span style="width:35%;"></span>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Sep 18, 2026</td>
+
+                            <td>
+                                <span class="legalease-drafts-table-status">
+                                    In Progress
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="d3.html" class="legalease-drafts-table-action">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-drafts-table-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-file-lines"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Personal Affidavit</strong>
+                                        <small>LE-D096</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Affidavit</td>
+
+                            <td>
+                                <div class="legalease-drafts-table-progress">
+
+                                    <div>
+                                        <span>20%</span>
+                                    </div>
+
+                                    <div class="legalease-drafts-table-progress-track">
+                                        <span style="width:20%;"></span>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Sep 16, 2026</td>
+
+                            <td>
+                                <span class="legalease-drafts-table-status">
+                                    In Progress
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="d3.html" class="legalease-drafts-table-action">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 4 : SAVE & CONTINUE -->
+        <section class="legalease-drafts-save">
+
+            <div class="legalease-drafts-save-icon">
+                <i class="fa-solid fa-floppy-disk"></i>
+            </div>
+
+            <div class="legalease-drafts-save-content">
+
+                <span>
+                    SAVE &amp; CONTINUE LATER
+                </span>
+
+                <h2>
+                    Your progress stays in your workspace.
+                </h2>
+
+                <p>
+                    You don't have to finish a document in one session.
+                    Return to your saved drafts whenever you're ready
+                    and continue from where you stopped.
+                </p>
+
+            </div>
+
+            <a href="d3.html" class="legalease-drafts-save-btn">
+                Create Document
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+     JavaScript
+     ========================================== -->
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

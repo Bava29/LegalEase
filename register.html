@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="LegalEase - Simple and secure online legal document preparation.">
+
+    <title>LegalEase</title>
+
+    <!-- Google Font - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         REGISTER PAGE CONTROLS
+    ========================================== -->
+
+    <div class="legalease-login-controls">
+
+        <!-- Dark Mode -->
+        <button type="button" class="legalease-login-control" id="legalease-theme-toggle" aria-label="Toggle dark mode"
+            title="Dark Mode">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        <!-- RTL Mode -->
+        <button type="button" class="legalease-login-control" id="legalease-rtl-toggle" aria-label="Toggle RTL mode"
+            title="RTL Mode">
+
+            <i class="fa-solid fa-right-left"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- ==========================================
+         REGISTER PAGE
+    ========================================== -->
+
+    <main class="legalease-register-page">
+
+        <div class="legalease-register-card">
+
+            <!-- Logo -->
+            <div class="legalease-register-logo">
+
+                <a href="index.html">
+
+                    <img src="images/logo.png" alt="LegalEase">
+
+                </a>
+
+            </div>
+
+            <!-- Heading -->
+            <div class="legalease-register-heading">
+
+                <h1>
+                    Create Your Account
+                </h1>
+
+                <p>
+                    Create your LegalEase account and keep your
+                    document preparation organized in one place.
+                </p>
+
+            </div>
+
+
+            <!-- Register Form -->
+            <form class="legalease-register-form">
+
+                <!-- Full Name -->
+                <div class="legalease-register-field">
+
+                    <label for="legalease-register-name">
+                        Full Name
+                    </label>
+
+                    <input type="text" id="legalease-register-name" name="name" placeholder="Enter your full name"
+                        autocomplete="name" required>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="legalease-register-field">
+
+                    <label for="legalease-register-email">
+                        Email Address
+                    </label>
+
+                    <input type="email" id="legalease-register-email" name="email" placeholder="Enter your email"
+                        autocomplete="email" required>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="legalease-register-field">
+
+                    <label for="legalease-register-password">
+                        Password
+                    </label>
+
+                    <div class="legalease-register-password-wrap">
+
+                        <input type="password" id="legalease-register-password" name="password"
+                            placeholder="Create a password" autocomplete="new-password" required>
+
+                        <button type="button" class="legalease-register-password-toggle"
+                            id="legalease-register-password-toggle" aria-label="Show password">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="legalease-register-field">
+
+                    <label for="legalease-register-confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <div class="legalease-register-password-wrap">
+
+                        <input type="password" id="legalease-register-confirm-password" name="confirm-password"
+                            placeholder="Confirm your password" autocomplete="new-password" required>
+
+                        <button type="button" class="legalease-register-password-toggle"
+                            id="legalease-register-confirm-toggle" aria-label="Show password">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Terms -->
+                <label class="legalease-register-terms">
+
+                    <input type="checkbox" name="terms" required>
+
+                    <span>
+                        I agree to the
+                        <a href="#">Terms of Use</a>
+                        and
+                        <a href="#">Privacy Policy</a>.
+                    </span>
+
+                </label>
+
+
+                <!-- Create Account -->
+                <button type="submit" class="legalease-register-button">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+            <!-- Divider -->
+            <div class="legalease-register-divider">
+
+                <span></span>
+
+                <p>
+                    Or Continue With
+                </p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- Social Register -->
+            <div class="legalease-register-socials">
+
+                <!-- Google -->
+                <a href="#" class="legalease-register-social" aria-label="Continue with Google">
+
+                    <img src="images/google-logo.svg" alt="Google">
+
+                </a>
+
+
+                <!-- Facebook -->
+                <a href="#" class="legalease-register-social" aria-label="Continue with Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <!-- Apple -->
+                <a href="#" class="legalease-register-social" aria-label="Continue with Apple">
+
+                    <i class="fa-brands fa-apple"></i>
+
+                </a>
+
+
+                <!-- X -->
+                <a href="#" class="legalease-register-social" aria-label="Continue with X">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Login -->
+            <div class="legalease-register-login">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="login.html">
+                    Sign In
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================
+     JavaScript
+     ========================================== -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="LegalEase - Simple and secure online legal document preparation.">
+
+    <title>LegalEase</title>
+
+    <!-- Google Font - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         DASHBOARD SIDEBAR
+    ====================================================== -->
+
+    <aside class="legalease-dashboard-sidebar" id="legalease-dashboard-sidebar">
+
+        <div class="legalease-dashboard-sidebar-inner">
+
+            <!-- Logo -->
+            <div class="legalease-dashboard-logo">
+
+                <a href="index.html">
+                    <img src="images/logo-light.png" alt="LegalEase">
+                </a>
+
+                <button type="button" class="legalease-dashboard-sidebar-close" id="legalease-dashboard-sidebar-close"
+                    aria-label="Close dashboard menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="legalease-dashboard-nav">
+
+                <span class="legalease-dashboard-nav-label">
+                    MAIN MENU
+                </span>
+
+                <a href="dashboard.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-pie-chart"></i>
+
+                    <span>Overview</span>
+
+                </a>
+
+
+                <a href="d2.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-regular fa-file-lines"></i>
+
+                    <span>My Documents</span>
+
+                </a>
+
+
+                <a href="d3.html" class="legalease-dashboard-nav-link active">
+
+                    <i class="fa-solid fa-file-circle-plus"></i>
+
+                    <span>Create Document</span>
+
+                </a>
+
+
+                <a href="d4.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-regular fa-folder-open"></i>
+
+                    <span>Drafts</span>
+
+                </a>
+
+
+                <a href="d5.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <span>Document History</span>
+
+                </a>
+
+
+                <a href="d6.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <span>Downloads</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="legalease-dashboard-sidebar-bottom">
+
+                <div class="legalease-dashboard-sidebar-mobile-account">
+                    <div class="legalease-dashboard-sidebar-mobile-actions">
+                        <button type="button" class="legalease-dashboard-sidebar-icon" aria-label="Notifications">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <button type="button" class="legalease-dashboard-sidebar-icon" aria-label="Settings">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                    </div>
+
+                    <button type="button" class="legalease-dashboard-sidebar-profile">
+                        <span class="legalease-dashboard-profile-image">
+                            <img src="images/profile.jpg" alt="Regina">
+                        </span>
+                        <span class="legalease-dashboard-profile-info">
+                            <strong>Regina</strong>
+                            <small>My Account</small>
+                        </span>
+                    </button>
+                </div>
+
+                <button type="button" class="legalease-dashboard-logout" id="legalease-dashboard-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         DASHBOARD HEADER
+    ====================================================== -->
+
+    <header class="legalease-dashboard-header">
+
+        <div class="legalease-dashboard-header-left">
+
+            <!-- Mobile / Tablet Toggle -->
+            <button type="button" class="legalease-dashboard-menu-toggle" id="legalease-dashboard-menu-toggle"
+                aria-label="Open dashboard menu" aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="legalease-dashboard-header-title">
+
+                <span>LEGAL WORKSPACE</span>
+
+                <h1>Create Your Document</h1>
+
+            </div>
+
+        </div>
+
+        <div class="legalease-dashboard-header-right">
+
+            <!-- Notifications -->
+            <button type="button" class="legalease-dashboard-header-icon" aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="legalease-dashboard-notification-badge">
+                    3
+                </span>
+
+            </button>
+
+
+            <!-- Settings -->
+            <button type="button" class="legalease-dashboard-header-icon" aria-label="Settings">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </button>
+
+
+            <!-- Dark Mode -->
+            <button type="button" class="legalease-dashboard-header-icon" id="legalease-dashboard-theme-toggle"
+                aria-label="Toggle dark mode" title="Dark Mode">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button" class="legalease-dashboard-header-icon" id="legalease-dashboard-rtl-toggle"
+                aria-label="Toggle RTL mode" title="RTL Mode">
+
+                <i class="fa-solid fa-right-left"></i>
+
+            </button>
+
+
+            <!-- Profile -->
+            <button type="button" class="legalease-dashboard-profile">
+
+                <span class="legalease-dashboard-profile-image">
+                    <img src="images/profile.jpg" alt="Regina">
+                </span>
+
+                <span class="legalease-dashboard-profile-info">
+                    <strong>Regina</strong>
+                    <small>My Account</small>
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="legalease-dashboard-sidebar-overlay" id="legalease-dashboard-sidebar-overlay">
+    </div>
+
+
+    <!-- =====================================================
+         LOGOUT CONFIRMATION POPUP
+    ====================================================== -->
+
+    <div class="legalease-dashboard-modal" id="legalease-dashboard-logout-modal" aria-hidden="true">
+
+        <div class="legalease-dashboard-modal-overlay" id="legalease-dashboard-modal-overlay">
+        </div>
+
+        <div class="legalease-dashboard-modal-card">
+
+            <div class="legalease-dashboard-modal-icon">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+
+            <h2>Logout?</h2>
+
+            <p>
+                Are you sure you want to logout from your
+                LegalEase workspace?
+            </p>
+
+            <div class="legalease-dashboard-modal-actions">
+
+                <button type="button" class="legalease-dashboard-modal-no" id="legalease-dashboard-logout-no">
+                    No
+                </button>
+
+                <button type="button" class="legalease-dashboard-modal-yes" id="legalease-dashboard-logout-yes">
+                    Yes, Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DASHBOARD MAIN
+    ====================================================== -->
+
+    <main class="legalease-dashboard-main">
+
+
+        <!-- =====================================================
+     CREATE DOCUMENT - SECTION 1
+====================================================== -->
+
+        <section class="legalease-create-intro">
+
+            <div class="legalease-create-intro-content">
+
+                <span>
+                    CREATE A DOCUMENT
+                </span>
+
+                <h2>
+                    Choose the document you need.
+                </h2>
+
+                <p>
+                    Select a document type below to begin a guided
+                    preparation process. You can save your progress
+                    and continue later from your workspace.
+                </p>
+
+            </div>
+
+            <div class="legalease-create-step">
+
+                <span>STEP</span>
+                <strong>01</strong>
+                <small>of 03</small>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+     CREATE DOCUMENT - SECTION 2
+====================================================== -->
+
+        <section class="legalease-create-types">
+
+            <div class="legalease-create-section-heading">
+
+                <div>
+                    <span>DOCUMENT TYPE</span>
+
+                    <h2>
+                        What would you like to prepare?
+                    </h2>
+                </div>
+
+                <p>
+                    Choose one option to continue.
+                </p>
+
+            </div>
+
+
+            <div class="legalease-create-type-grid">
+
+                <!-- Will -->
+
+                <label class="legalease-create-type-card">
+
+                    <input type="radio" name="document-type" value="will" checked>
+
+                    <div class="legalease-create-type-content">
+
+                        <div class="legalease-create-type-icon">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+
+                        <div class="legalease-create-type-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <h3>
+                            Last Will &amp; Testament
+                        </h3>
+
+                        <p>
+                            Prepare a structured will with guided
+                            questions about your wishes and beneficiaries.
+                        </p>
+
+                        <span class="legalease-create-type-link">
+                            Start with this document
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </label>
+
+
+                <!-- Power of Attorney -->
+
+                <label class="legalease-create-type-card">
+
+                    <input type="radio" name="document-type" value="power-of-attorney">
+
+                    <div class="legalease-create-type-content">
+
+                        <div class="legalease-create-type-icon">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <div class="legalease-create-type-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <h3>
+                            Power of Attorney
+                        </h3>
+
+                        <p>
+                            Prepare a power of attorney by providing
+                            information about the person and authority involved.
+                        </p>
+
+                        <span class="legalease-create-type-link">
+                            Start with this document
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </label>
+
+
+                <!-- Affidavit -->
+
+                <label class="legalease-create-type-card">
+
+                    <input type="radio" name="document-type" value="affidavit">
+
+                    <div class="legalease-create-type-content">
+
+                        <div class="legalease-create-type-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <div class="legalease-create-type-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <h3>
+                            Affidavit
+                        </h3>
+
+                        <p>
+                            Prepare an affidavit by entering the relevant
+                            personal and declaration information.
+                        </p>
+
+                        <span class="legalease-create-type-link">
+                            Start with this document
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+     CREATE DOCUMENT - SECTION 3
+====================================================== -->
+
+        <section class="legalease-create-guide">
+
+            <div class="legalease-create-guide-visual">
+
+                <div class="legalease-create-guide-card">
+
+                    <div class="legalease-create-guide-card-top">
+
+                        <span>
+                            PREPARATION GUIDE
+                        </span>
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                    </div>
+
+
+                    <div class="legalease-create-guide-progress">
+
+                        <div>
+                            <span>Preparation</span>
+                            <strong>Ready to begin</strong>
+                        </div>
+
+                        <div class="legalease-create-guide-line">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="legalease-create-guide-items">
+
+                        <div>
+                            <i class="fa-solid fa-user"></i>
+                            <span>Personal information</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-people-group"></i>
+                            <span>Relevant people &amp; details</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-file-circle-check"></i>
+                            <span>Review your information</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="legalease-create-guide-content">
+
+                <span>
+                    BEFORE YOU START
+                </span>
+
+                <h2>
+                    Know what you'll need
+                    <span>before preparing your document.</span>
+                </h2>
+
+                <p>
+                    The guided process will ask you a series of questions
+                    based on the document you choose. Having the relevant
+                    information ready can make the process easier.
+                </p>
+
+
+                <div class="legalease-create-guide-list">
+
+                    <div>
+
+                        <span>01</span>
+
+                        <div>
+                            <h3>Personal details</h3>
+                            <p>
+                                Basic information needed to identify
+                                the people involved in your document.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>02</span>
+
+                        <div>
+                            <h3>Document-specific information</h3>
+                            <p>
+                                Details will vary depending on the type
+                                of document you choose.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>03</span>
+
+                        <div>
+                            <h3>Time to review</h3>
+                            <p>
+                                You'll have an opportunity to review
+                                the information before completing it.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+     CREATE DOCUMENT - SECTION 4
+====================================================== -->
+
+        <section class="legalease-create-start">
+
+            <div class="legalease-create-start-card">
+
+                <div class="legalease-create-start-icon">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                </div>
+
+                <div class="legalease-create-start-content">
+
+                    <span>
+                        READY TO BEGIN?
+                    </span>
+
+                    <h2>
+                        Start your guided document preparation.
+                    </h2>
+
+                    <p>
+                        Your selected document will open in a step-by-step
+                        workspace where you can enter information, save
+                        your progress and return later.
+                    </p>
+
+                </div>
+
+                <div class="legalease-create-start-action">
+
+                    <button type="button" class="legalease-create-start-btn">
+
+                        Start Preparation
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                    <small>
+                        You can save and continue later.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+     JavaScript
+     ========================================== -->
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

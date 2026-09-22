@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="LegalEase - Simple and secure online legal document preparation.">
+
+    <title>LegalEase</title>
+
+    <!-- Google Font - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         DASHBOARD SIDEBAR
+    ====================================================== -->
+
+    <aside class="legalease-dashboard-sidebar" id="legalease-dashboard-sidebar">
+
+        <div class="legalease-dashboard-sidebar-inner">
+
+            <!-- Logo -->
+            <div class="legalease-dashboard-logo">
+
+                <a href="index.html">
+                    <img src="images/logo-light.png" alt="LegalEase">
+                </a>
+
+                <button type="button" class="legalease-dashboard-sidebar-close" id="legalease-dashboard-sidebar-close"
+                    aria-label="Close dashboard menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="legalease-dashboard-nav">
+
+                <span class="legalease-dashboard-nav-label">
+                    MAIN MENU
+                </span>
+
+                <a href="dashboard.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-pie-chart"></i>
+
+                    <span>Overview</span>
+
+                </a>
+
+
+                <a href="d2.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-regular fa-file-lines"></i>
+
+                    <span>My Documents</span>
+
+                </a>
+
+
+                <a href="d3.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-file-circle-plus"></i>
+
+                    <span>Create Document</span>
+
+                </a>
+
+
+                <a href="d4.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-regular fa-folder-open"></i>
+
+                    <span>Drafts</span>
+
+                </a>
+
+
+                <a href="d5.html" class="legalease-dashboard-nav-link active">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <span>Document History</span>
+
+                </a>
+
+
+                <a href="d6.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <span>Downloads</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="legalease-dashboard-sidebar-bottom">
+
+                <div class="legalease-dashboard-sidebar-mobile-account">
+                    <div class="legalease-dashboard-sidebar-mobile-actions">
+                        <button type="button" class="legalease-dashboard-sidebar-icon" aria-label="Notifications">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <button type="button" class="legalease-dashboard-sidebar-icon" aria-label="Settings">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                    </div>
+
+                    <button type="button" class="legalease-dashboard-sidebar-profile">
+                        <span class="legalease-dashboard-profile-image">
+                            <img src="images/profile.jpg" alt="Regina">
+                        </span>
+                        <span class="legalease-dashboard-profile-info">
+                            <strong>Regina</strong>
+                            <small>My Account</small>
+                        </span>
+                    </button>
+                </div>
+
+                <button type="button" class="legalease-dashboard-logout" id="legalease-dashboard-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         DASHBOARD HEADER
+    ====================================================== -->
+
+    <header class="legalease-dashboard-header">
+
+        <div class="legalease-dashboard-header-left">
+
+            <!-- Mobile / Tablet Toggle -->
+            <button type="button" class="legalease-dashboard-menu-toggle" id="legalease-dashboard-menu-toggle"
+                aria-label="Open dashboard menu" aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="legalease-dashboard-header-title">
+
+                <span>LEGAL WORKSPACE</span>
+
+                <h1>History</h1>
+
+            </div>
+
+        </div>
+
+        <div class="legalease-dashboard-header-right">
+
+            <!-- Notifications -->
+            <button type="button" class="legalease-dashboard-header-icon" aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="legalease-dashboard-notification-badge">
+                    3
+                </span>
+
+            </button>
+
+
+            <!-- Settings -->
+            <button type="button" class="legalease-dashboard-header-icon" aria-label="Settings">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </button>
+
+
+            <!-- Dark Mode -->
+            <button type="button" class="legalease-dashboard-header-icon" id="legalease-dashboard-theme-toggle"
+                aria-label="Toggle dark mode" title="Dark Mode">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button" class="legalease-dashboard-header-icon" id="legalease-dashboard-rtl-toggle"
+                aria-label="Toggle RTL mode" title="RTL Mode">
+
+                <i class="fa-solid fa-right-left"></i>
+
+            </button>
+
+
+            <!-- Profile -->
+            <button type="button" class="legalease-dashboard-profile">
+
+                <span class="legalease-dashboard-profile-image">
+                    <img src="images/profile.jpg" alt="Regina">
+                </span>
+
+                <span class="legalease-dashboard-profile-info">
+                    <strong>Regina</strong>
+                    <small>My Account</small>
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="legalease-dashboard-sidebar-overlay" id="legalease-dashboard-sidebar-overlay">
+    </div>
+
+
+    <!-- =====================================================
+         LOGOUT CONFIRMATION POPUP
+    ====================================================== -->
+
+    <div class="legalease-dashboard-modal" id="legalease-dashboard-logout-modal" aria-hidden="true">
+
+        <div class="legalease-dashboard-modal-overlay" id="legalease-dashboard-modal-overlay">
+        </div>
+
+        <div class="legalease-dashboard-modal-card">
+
+            <div class="legalease-dashboard-modal-icon">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+
+            <h2>Logout?</h2>
+
+            <p>
+                Are you sure you want to logout from your
+                LegalEase workspace?
+            </p>
+
+            <div class="legalease-dashboard-modal-actions">
+
+                <button type="button" class="legalease-dashboard-modal-no" id="legalease-dashboard-logout-no">
+                    No
+                </button>
+
+                <button type="button" class="legalease-dashboard-modal-yes" id="legalease-dashboard-logout-yes">
+                    Yes, Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <main class="legalease-dashboard-main">
+
+        <!-- SECTION 1 : HISTORY INTRO -->
+        <section class="legalease-history-intro">
+
+            <div class="legalease-history-intro-content">
+
+                <span class="legalease-history-intro-label">
+                    DOCUMENT HISTORY
+                </span>
+
+                <h2>
+                    Keep track of your
+                    <span>document activity.</span>
+                </h2>
+
+                <p>
+                    Review your completed documents, preparation activity
+                    and important updates from your LegalEase workspace.
+                    Everything stays organized in one place.
+                </p>
+
+            </div>
+
+            <div class="legalease-history-summary">
+
+                <div class="legalease-history-summary-icon">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+
+                <div>
+                    <strong>04</strong>
+                    <span>Completed Documents</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 2 : ACTIVITY SUMMARY -->
+        <section class="legalease-history-summary-section">
+
+            <div class="legalease-history-section-heading">
+
+                <div>
+                    <span>ACTIVITY OVERVIEW</span>
+
+                    <h2>
+                        Your recent document activity.
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="legalease-history-stat-grid">
+
+                <div class="legalease-history-stat-card">
+
+                    <div class="legalease-history-stat-icon">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Documents Completed</span>
+                    </div>
+
+                    <small>
+                        Successfully prepared
+                    </small>
+
+                </div>
+
+
+                <div class="legalease-history-stat-card">
+
+                    <div class="legalease-history-stat-icon">
+                        <i class="fa-solid fa-download"></i>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Documents Downloaded</span>
+                    </div>
+
+                    <small>
+                        Available in downloads
+                    </small>
+
+                </div>
+
+
+                <div class="legalease-history-stat-card">
+
+                    <div class="legalease-history-stat-icon">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>Drafts Updated</span>
+                    </div>
+
+                    <small>
+                        Recently worked on
+                    </small>
+
+                </div>
+
+
+                <div class="legalease-history-stat-card">
+
+                    <div class="legalease-history-stat-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>09</strong>
+                        <span>Activities This Month</span>
+                    </div>
+
+                    <small>
+                        Workspace activity
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 3 : DOCUMENT HISTORY TABLE -->
+        <section class="legalease-history-list-section">
+
+            <div class="legalease-history-section-heading">
+
+                <div>
+                    <span>ACTIVITY LOG</span>
+
+                    <h2>
+                        Document activity history.
+                    </h2>
+                </div>
+
+                <div class="legalease-history-filter">
+
+                    <button type="button" class="active">
+                        All Activity
+                    </button>
+
+                    <button type="button">
+                        Completed
+                    </button>
+
+                    <button type="button">
+                        Downloaded
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="legalease-history-table-wrap">
+
+                <table class="legalease-history-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Document</th>
+                            <th>Activity</th>
+                            <th>Document Type</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-history-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-scroll"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Family Will 2026</strong>
+                                        <small>LE-1024</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-activity">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    Document completed
+                                </span>
+                            </td>
+
+                            <td>
+                                Last Will &amp; Testament
+                            </td>
+
+                            <td>
+                                Sep 19, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="d2.html" class="legalease-history-action" aria-label="View document">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-history-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-file-signature"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Property Power of Attorney</strong>
+                                        <small>LE-1021</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-activity">
+                                    <i class="fa-solid fa-download"></i>
+                                    Document downloaded
+                                </span>
+                            </td>
+
+                            <td>
+                                Power of Attorney
+                            </td>
+
+                            <td>
+                                Sep 17, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-status downloaded">
+                                    Downloaded
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="d2.html" class="legalease-history-action" aria-label="View document">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-history-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-file-lines"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Personal Affidavit</strong>
+                                        <small>LE-1018</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-activity">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    Document completed
+                                </span>
+                            </td>
+
+                            <td>
+                                Affidavit
+                            </td>
+
+                            <td>
+                                Sep 15, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="d2.html" class="legalease-history-action" aria-label="View document">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-history-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-scroll"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Family Will 2026</strong>
+                                        <small>LE-1024</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-activity">
+                                    <i class="fa-solid fa-pen"></i>
+                                    Document updated
+                                </span>
+                            </td>
+
+                            <td>
+                                Last Will &amp; Testament
+                            </td>
+
+                            <td>
+                                Sep 14, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-status updated">
+                                    Updated
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="d2.html" class="legalease-history-action" aria-label="View document">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-history-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-file-signature"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Property Power of Attorney</strong>
+                                        <small>LE-1021</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-activity">
+                                    <i class="fa-solid fa-file-circle-check"></i>
+                                    Document completed
+                                </span>
+                            </td>
+
+                            <td>
+                                Power of Attorney
+                            </td>
+
+                            <td>
+                                Sep 12, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-history-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="d2.html" class="legalease-history-action" aria-label="View document">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 4 : HISTORY INFO -->
+        <section class="legalease-history-info">
+
+            <div class="legalease-history-info-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="legalease-history-info-content">
+
+                <span>
+                    ORGANIZED WORKSPACE
+                </span>
+
+                <h2>
+                    Your document activity stays easy to follow.
+                </h2>
+
+                <p>
+                    Use your history to review when documents were completed,
+                    updated or downloaded. Your document library keeps the
+                    latest versions organized for easy access.
+                </p>
+
+            </div>
+
+            <a href="d2.html" class="legalease-history-info-btn">
+                View My Documents
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+     JavaScript
+     ========================================== -->
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="LegalEase - Simple and secure online legal document preparation.">
+
+    <title>LegalEase</title>
+
+    <!-- Google Font - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+     LegalEase Header
+     ========================================== -->
+
+    <header class="legalease-header">
+
+        <div class="legalease-header-container">
+
+
+            <!-- ==========================================
+             Logo
+             ========================================== -->
+
+            <a href="index.html" class="legalease-logo">
+
+                <img src="images/logo.png" alt="LegalEase">
+
+            </a>
+
+
+
+            <!-- ==========================================
+             Navigation Wrapper
+             ========================================== -->
+
+            <nav class="legalease-navigation" id="legalease-navigation" aria-label="Main Navigation">
+
+
+                <!-- ==========================================
+                 Main Menu
+                 ========================================== -->
+
+                <ul class="legalease-menu">
+
+
+                    <!-- Home Dropdown -->
+                    <li class="legalease-menu-item legalease-dropdown active">
+
+                        <button type="button" class="legalease-menu-link legalease-dropdown-toggle">
+
+                            <span>Home</span>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <ul class="legalease-dropdown-menu">
+
+                            <li>
+                                <a href="index.html">
+                                    Home 1
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="home-2.html" class="active">
+                                    Home 2
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+                    <!-- About -->
+                    <li class="legalease-menu-item">
+
+                        <a href="about.html" class="legalease-menu-link">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Documents & Pricing -->
+                    <li class="legalease-menu-item">
+
+                        <a href="documents-pricing.html" class="legalease-menu-link">
+
+                            Documents &amp; Pricing
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- How It Works -->
+                    <li class="legalease-menu-item">
+
+                        <a href="how-it-works.html" class="legalease-menu-link">
+
+                            How It Works
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Security & Privacy -->
+                    <li class="legalease-menu-item">
+
+                        <a href="security-privacy.html" class="legalease-menu-link">
+
+                            Security &amp; Privacy
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Contact -->
+                    <li class="legalease-menu-item">
+
+                        <a href="contact.html" class="legalease-menu-link">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- ==========================================
+                     Mobile Menu Actions
+                     ========================================== -->
+
+                    <li class="legalease-mobile-actions">
+
+
+                        <!-- Dark Mode -->
+                        <button type="button" class="legalease-action-btn" id="legalease-theme-toggle">
+
+                            <span>
+                                Dark Mode
+                            </span>
+
+                            <i class="fa-solid fa-moon"></i>
+
+                        </button>
+
+
+
+                        <!-- RTL Mode -->
+                        <button type="button" class="legalease-action-btn" id="legalease-rtl-toggle">
+
+                            <span>
+                                RTL Mode
+                            </span>
+
+                            <i class="fa-solid fa-right-left"></i>
+
+                        </button>
+
+
+
+                        <!-- Login -->
+                        <a href="login.html" class="legalease-login-btn">
+
+                            Login
+
+                        </a>
+
+
+
+                        <!-- Dashboard -->
+                        <a href="dashboard.html" class="legalease-dashboard-btn">
+
+                            Dashboard
+
+                        </a>
+
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- ==========================================
+             Desktop Header Actions
+             ========================================== -->
+
+            <div class="legalease-desktop-actions">
+
+
+                <!-- Dark Mode -->
+                <button type="button" class="legalease-header-toggle" id="legalease-theme-toggle-desktop"
+                    aria-label="Toggle dark mode" title="Dark Mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+
+                <!-- RTL Mode -->
+                <button type="button" class="legalease-header-toggle" id="legalease-rtl-toggle-desktop"
+                    aria-label="Toggle RTL mode" title="RTL Mode">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+
+                <!-- Login -->
+                <a href="login.html" class="legalease-login-btn">
+
+                    Login
+
+                </a>
+
+
+
+                <!-- Dashboard -->
+                <a href="dashboard.html" class="legalease-dashboard-btn">
+
+                    Dashboard
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+             Mobile Menu Toggle
+             ========================================== -->
+
+            <button type="button" class="legalease-mobile-toggle" id="legalease-mobile-toggle" aria-label="Open menu"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+     LegalEase Home 2 Hero
+     ========================================== -->
+
+    <section class="legalease-home2-hero">
+
+        <div class="legalease-home2-hero-overlay"></div>
+
+        <div class="legalease-home2-hero-container">
+
+            <div class="legalease-home2-hero-content">
+
+                <span class="legalease-home2-hero-label">
+                    SIMPLE. SECURE. LEGAL.
+                </span>
+
+                <h1 class="legalease-home2-hero-title">
+                    Legal documents,
+                    <span>made easier for you.</span>
+                </h1>
+
+                <p class="legalease-home2-hero-description">
+                    Prepare wills, power of attorney documents and affidavits
+                    through a simple guided process. Save your progress,
+                    review your information and download your completed
+                    document when you're ready.
+                </p>
+
+                <div class="legalease-home2-hero-actions">
+
+                    <a href="documents-pricing.html" class="legalease-home2-hero-primary">
+                        Create a Document
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="how-it-works.html" class="legalease-home2-hero-secondary">
+                        How It Works
+                    </a>
+
+                </div>
+
+                <div class="legalease-home2-hero-trust">
+
+                    <span>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Secure &amp; private
+                    </span>
+
+                    <span class="legalease-home2-trust-divider"></span>
+
+                    <span>
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Save &amp; continue later
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+     LegalEase Home 2 - Section 2
+     Documents
+     ========================================== -->
+
+    <section class="legalease-home2-documents">
+
+        <div class="legalease-home2-documents-container">
+
+            <!-- Heading -->
+            <div class="legalease-home2-documents-heading">
+
+                <span class="legalease-home2-documents-label">
+                    WHAT YOU CAN PREPARE
+                </span>
+
+                <h2 class="legalease-home2-documents-title">
+                    Important documents,
+                    <span>without the complicated process.</span>
+                </h2>
+
+                <p class="legalease-home2-documents-intro">
+                    Choose what you need and follow a guided process designed
+                    to make document preparation clear and manageable.
+                </p>
+
+            </div>
+
+
+            <!-- Document Cards -->
+            <div class="legalease-home2-documents-grid">
+
+                <!-- Card 01 -->
+                <div class="legalease-home2-document-card">
+
+                    <div class="legalease-home2-document-top">
+
+                        <div class="legalease-home2-document-icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+
+                        <span class="legalease-home2-document-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Last Will &amp; Testament
+                    </h3>
+
+                    <p>
+                        Organize your wishes and how your assets should
+                        be handled with a clear and structured will.
+                    </p>
+
+                    <a href="documents-pricing.html">
+                        Prepare a Will
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Card 02 -->
+                <div class="legalease-home2-document-card">
+
+                    <div class="legalease-home2-document-top">
+
+                        <div class="legalease-home2-document-icon">
+                            <i class="fa-solid fa-signature"></i>
+                        </div>
+
+                        <span class="legalease-home2-document-number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Power of Attorney
+                    </h3>
+
+                    <p>
+                        Prepare a document that allows you to authorize
+                        someone to act on your behalf when needed.
+                    </p>
+
+                    <a href="documents-pricing.html">
+                        Prepare a Power of Attorney
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Card 03 -->
+                <div class="legalease-home2-document-card">
+
+                    <div class="legalease-home2-document-top">
+
+                        <div class="legalease-home2-document-icon">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+
+                        <span class="legalease-home2-document-number">
+                            03
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Affidavit
+                    </h3>
+
+                    <p>
+                        Create a structured affidavit for formally declaring
+                        each facts or law statements in writing.
+                    </p>
+
+                    <a href="documents-pricing.html">
+                        Prepare an Affidavit
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+     LegalEase Home 2 - Section 3
+     Guided Preparation
+     ========================================== -->
+
+    <section class="legalease-home2-guided">
+
+        <div class="legalease-home2-guided-container">
+
+            <!-- Image Side -->
+            <div class="legalease-home2-guided-visual">
+
+                <div class="legalease-home2-guided-image-wrap">
+
+                    <img src="images/legal-home2-guided.jpg" alt="Professional preparing legal documents"
+                        class="legalease-home2-guided-image">
+
+                </div>
+
+                <!-- Floating Info Card -->
+                <div class="legalease-home2-guided-card">
+
+                    <div class="legalease-home2-guided-card-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>Guided step by step</strong>
+                        <span>Simple questions. Clear progress.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Content Side -->
+            <div class="legalease-home2-guided-content">
+
+                <span class="legalease-home2-guided-label">
+                    A CLEARER PROCESS
+                </span>
+
+                <h2 class="legalease-home2-guided-title">
+                    No complicated forms.
+                    <span>Just simple guided steps.</span>
+                </h2>
+
+                <p class="legalease-home2-guided-description">
+                    LegalEase breaks document preparation into manageable
+                    steps so you can focus on providing the information
+                    that matters. You don't have to complete everything
+                    in one sitting.
+                </p>
+
+
+                <!-- Feature 01 -->
+                <div class="legalease-home2-guided-feature">
+
+                    <div class="legalease-home2-guided-feature-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>Answer simple questions</h3>
+                        <p>
+                            Follow clear prompts instead of working through
+                            unfamiliar legal forms on your own.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 02 -->
+                <div class="legalease-home2-guided-feature">
+
+                    <div class="legalease-home2-guided-feature-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>Save your progress</h3>
+                        <p>
+                            Leave whenever you need and return later without
+                            losing the information you've entered.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 03 -->
+                <div class="legalease-home2-guided-feature">
+
+                    <div class="legalease-home2-guided-feature-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>Review before finishing</h3>
+                        <p>
+                            Take a final look through your information before
+                            completing and downloading your document.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <a href="how-it-works.html" class="legalease-home2-guided-button">
+                    Explore the process
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+     LegalEase Home 2 - Section 4
+     How It Works
+     ========================================== -->
+
+    <section class="legalease-home2-process">
+
+        <div class="legalease-home2-process-container">
+
+            <!-- Heading -->
+            <div class="legalease-home2-process-heading">
+
+                <span class="legalease-home2-process-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2 class="legalease-home2-process-title">
+                    From starting point
+                    <span>to completed document.</span>
+                </h2>
+
+                <p class="legalease-home2-process-intro">
+                    A straightforward process that lets you prepare your
+                    document at your own pace.
+                </p>
+
+            </div>
+
+
+            <!-- Process -->
+            <div class="legalease-home2-process-flow">
+
+                <!-- Step 01 -->
+                <div class="legalease-home2-process-item">
+
+                    <div class="legalease-home2-process-icon">
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+
+                    <span class="legalease-home2-process-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Choose a doc
+                    </h3>
+
+                    <p>
+                        Select the legal document that matches
+                        what you need.
+                    </p>
+
+                </div>
+
+
+                <div class="legalease-home2-process-line"></div>
+
+
+                <!-- Step 02 -->
+                <div class="legalease-home2-process-item">
+
+                    <div class="legalease-home2-process-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <span class="legalease-home2-process-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Answer questions
+                    </h3>
+
+                    <p>
+                        Follow simple prompts and provide
+                        the information.
+                    </p>
+
+                </div>
+
+
+                <div class="legalease-home2-process-line"></div>
+
+
+                <!-- Step 03 -->
+                <div class="legalease-home2-process-item">
+
+                    <div class="legalease-home2-process-icon">
+                        <i class="fa-regular fa-floppy-disk"></i>
+                    </div>
+
+                    <span class="legalease-home2-process-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Save &amp; review
+                    </h3>
+
+                    <p>
+                        Save your progress and return later
+                        whenever you're ready.
+                    </p>
+
+                </div>
+
+
+                <div class="legalease-home2-process-line"></div>
+
+
+                <!-- Step 04 -->
+                <div class="legalease-home2-process-item">
+
+                    <div class="legalease-home2-process-icon">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                    </div>
+
+                    <span class="legalease-home2-process-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Download
+                    </h3>
+
+                    <p>
+                        Finish your document and download
+                        the completed PDF.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom CTA -->
+            <div class="legalease-home2-process-cta">
+
+                <span>
+                    Ready to get started?
+                </span>
+
+                <a href="documents-pricing.html">
+                    Choose a Document
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+     LegalEase Home 2 - Section 5
+     Security & Privacy
+     ========================================== -->
+
+    <section class="legalease-home2-security">
+
+        <div class="legalease-home2-security-container">
+
+            <!-- Content -->
+            <div class="legalease-home2-security-content">
+
+                <span class="legalease-home2-security-label">
+                    SECURITY &amp; PRIVACY
+                </span>
+
+                <h2 class="legalease-home2-security-title">
+                    Your important documents
+                    <span>deserve a private space.</span>
+                </h2>
+
+                <p class="legalease-home2-security-description">
+                    LegalEase keeps your document preparation organized
+                    within your account, so your drafts and completed
+                    documents are easy to access when you need them.
+                </p>
+
+
+                <div class="legalease-home2-security-features">
+
+                    <!-- Feature 01 -->
+                    <div class="legalease-home2-security-feature">
+
+                        <div class="legalease-home2-security-icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                        <div>
+                            <h3>Private workspace</h3>
+                            <p>
+                                Keep your document preparation within
+                                your personal account.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 02 -->
+                    <div class="legalease-home2-security-feature">
+
+                        <div class="legalease-home2-security-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+
+                        <div>
+                            <h3>Account-based access</h3>
+                            <p>
+                                Your drafts and completed documents stay
+                                organized in one place.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 03 -->
+                    <div class="legalease-home2-security-feature">
+
+                        <div class="legalease-home2-security-icon">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+
+                        <div>
+                            <h3>Everything in one place</h3>
+                            <p>
+                                Find your documents, drafts and downloads
+                                from your dashboard.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a href="security-privacy.html" class="legalease-home2-security-button">
+                    Learn about security
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <!-- Image -->
+            <div class="legalease-home2-security-visual">
+
+                <img src="images/legal-home2-security.jpg" alt="Secure legal document workspace"
+                    class="legalease-home2-security-image">
+
+                <div class="legalease-home2-security-badge">
+
+                    <div class="legalease-home2-security-badge-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <strong>Private workspace</strong>
+                        <span>Designed around your documents</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+     LEGALEASE HOME 2 - WORKSPACE SECTION
+     ========================================== -->
+
+    <section class="legalease-home2-workspace">
+
+        <div class="legalease-home2-workspace-container">
+
+            <div class="legalease-home2-workspace-content">
+
+                <span class="legalease-home2-workspace-label">
+                    YOUR WORKSPACE
+                </span>
+
+                <h2 class="legalease-home2-workspace-title">
+                    Everything you need,
+                    <span>right in your dashboard.</span>
+                </h2>
+
+                <p class="legalease-home2-workspace-description">
+                    Your LegalEase account gives you one simple place to
+                    manage document preparation, continue unfinished drafts,
+                    review completed documents and access your downloads.
+                </p>
+
+                <div class="legalease-home2-workspace-list">
+
+                    <div class="legalease-home2-workspace-item">
+                        <div class="legalease-home2-workspace-item-icon">
+                            <i class="fa-solid fa-file-pen"></i>
+                        </div>
+                        <div>
+                            <h3>Create &amp; edit documents</h3>
+                            <p>
+                                Start a new document and work through each
+                                guided step at your own pace.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="legalease-home2-workspace-item">
+                        <div class="legalease-home2-workspace-item-icon">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h3>Continue your drafts</h3>
+                            <p>
+                                Return to unfinished documents without
+                                starting the process again.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="legalease-home2-workspace-item">
+                        <div class="legalease-home2-workspace-item-icon">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div>
+                            <h3>Access your downloads</h3>
+                            <p>
+                                Keep completed documents available from
+                                your account whenever you need them.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="login.html" class="legalease-home2-workspace-button">
+                    Access your workspace
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="legalease-home2-workspace-visual">
+
+                <div class="legalease-home2-dashboard">
+
+                    <div class="legalease-home2-dashboard-top">
+
+                        <div>
+                            <span class="legalease-home2-dashboard-label">
+                                MY WORKSPACE
+                            </span>
+
+                            <h3>Welcome back</h3>
+                        </div>
+
+                        <div class="legalease-home2-dashboard-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="legalease-home2-dashboard-stats">
+
+                        <div class="legalease-home2-dashboard-stat">
+                            <span>Active Drafts</span>
+                            <strong>02</strong>
+                        </div>
+
+                        <div class="legalease-home2-dashboard-stat">
+                            <span>Completed</span>
+                            <strong>05</strong>
+                        </div>
+
+                        <div class="legalease-home2-dashboard-stat">
+                            <span>Downloads</span>
+                            <strong>08</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="legalease-home2-dashboard-heading">
+                        <span>Recent Documents</span>
+                        <a href="dashboard.html">View all</a>
+                    </div>
+
+
+                    <div class="legalease-home2-dashboard-document">
+
+                        <div class="legalease-home2-dashboard-document-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <div class="legalease-home2-dashboard-document-info">
+                            <strong>Last Will &amp; Testament</strong>
+                            <span>Updated recently</span>
+                        </div>
+
+                        <span class="legalease-home2-dashboard-status">
+                            Draft
+                        </span>
+
+                    </div>
+
+
+                    <div class="legalease-home2-dashboard-document">
+
+                        <div class="legalease-home2-dashboard-document-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+
+                        <div class="legalease-home2-dashboard-document-info">
+                            <strong>Power of Attorney</strong>
+                            <span>Completed document</span>
+                        </div>
+
+                        <span class="legalease-home2-dashboard-status completed">
+                            Ready
+                        </span>
+
+                    </div>
+
+
+                    <div class="legalease-home2-dashboard-document">
+
+                        <div class="legalease-home2-dashboard-document-icon">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+
+                        <div class="legalease-home2-dashboard-document-info">
+                            <strong>Affidavit</strong>
+                            <span>Completed document</span>
+                        </div>
+
+                        <span class="legalease-home2-dashboard-status completed">
+                            Ready
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+     LEGALEASE HOME 2 - CONFIDENCE SECTION
+     ========================================== -->
+
+    <section class="legalease-home2-confidence">
+
+        <div class="legalease-home2-confidence-container">
+
+            <div class="legalease-home2-confidence-visual">
+
+                <img src="images/legal-home2-confidence.jpg" alt="Professional reviewing legal documents"
+                    class="legalease-home2-confidence-image">
+
+                <div class="legalease-home2-confidence-note">
+                    <div class="legalease-home2-confidence-note-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>Review before you finish</strong>
+                        <span>Take your time with every detail.</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="legalease-home2-confidence-content">
+
+                <span class="legalease-home2-confidence-label">
+                    PREPARE WITH CONFIDENCE
+                </span>
+
+                <h2 class="legalease-home2-confidence-title">
+                    Take your time.
+                    <span>Get every detail in place.</span>
+                </h2>
+
+                <p class="legalease-home2-confidence-description">
+                    Important documents deserve careful attention.
+                    LegalEase gives you a simple workspace where you
+                    can work through your information, save your progress
+                    and review everything before completing your document.
+                </p>
+
+                <div class="legalease-home2-confidence-points">
+
+                    <div class="legalease-home2-confidence-point">
+                        <span class="legalease-home2-confidence-number">01</span>
+
+                        <div>
+                            <h3>Work at your own pace</h3>
+                            <p>
+                                Complete your document in one sitting or
+                                come back when you're ready.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="legalease-home2-confidence-point">
+                        <span class="legalease-home2-confidence-number">02</span>
+
+                        <div>
+                            <h3>Review your information</h3>
+                            <p>
+                                Check the details you've provided before
+                                moving toward completion.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="legalease-home2-confidence-point">
+                        <span class="legalease-home2-confidence-number">03</span>
+
+                        <div>
+                            <h3>Keep documents accessible</h3>
+                            <p>
+                                Return to your account whenever you need
+                                to access your completed documents.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="how-it-works.html" class="legalease-home2-confidence-button">
+                    See how it works
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+     LEGALEASE HOME 2 - FINAL CTA
+     ========================================== -->
+
+    <section class="legalease-home2-final-cta">
+
+        <div class="legalease-home2-final-cta-container">
+
+            <div class="legalease-home2-final-cta-card">
+
+                <!-- LEFT CONTENT -->
+                <div class="legalease-home2-final-cta-content">
+
+                    <span class="legalease-home2-final-cta-label">
+                        GET STARTED
+                    </span>
+
+                    <h2 class="legalease-home2-final-cta-title">
+                        Ready to prepare
+                        <span>your document?</span>
+                    </h2>
+
+                    <p class="legalease-home2-final-cta-description">
+                        Choose the document you need and follow the
+                        guided process at your own pace. Your workspace
+                        keeps everything organized along the way.
+                    </p>
+
+                    <div class="legalease-home2-final-cta-actions">
+
+                        <a href="documents-pricing.html" class="legalease-home2-final-cta-primary">
+                            Create a Document
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="how-it-works.html" class="legalease-home2-final-cta-secondary">
+                            See How It Works
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT IMAGE -->
+                <div class="legalease-home2-final-cta-visual">
+
+                    <img src="images/legal-home2-cta.jpg" alt="Professional preparing legal documents"
+                        class="legalease-home2-final-cta-image">
+
+                    <div class="legalease-home2-final-cta-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Simple &amp; secure</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+     LegalEase Footer
+     ========================================== -->
+
+    <footer class="legalease-footer">
+
+        <div class="legalease-footer-container">
+
+
+            <!-- ==========================================
+             Footer Main
+             ========================================== -->
+
+            <div class="legalease-footer-main">
+
+
+                <!-- Brand -->
+                <div class="legalease-footer-brand">
+
+                    <a href="index.html" class="legalease-footer-logo">
+
+                        <img src="images/logo-light.png" alt="LegalEase">
+
+                    </a>
+
+                    <p class="legalease-footer-description">
+                        Create important legal documents through a
+                        simple, guided and secure online experience.
+                    </p>
+
+                    <a href="documents-pricing.html" class="legalease-footer-cta">
+
+                        Get Started
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Quick Links -->
+                <div class="legalease-footer-column">
+
+                    <h3 class="legalease-footer-title">
+                        Quick Links
+                    </h3>
+
+                    <ul class="legalease-footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Documents &amp; Pricing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="how-it-works.html">
+                                How It Works
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Legal Documents -->
+                <div class="legalease-footer-column">
+
+                    <h3 class="legalease-footer-title">
+                        Legal Documents
+                    </h3>
+
+                    <ul class="legalease-footer-links">
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Wills
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Power of Attorney
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Affidavits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Document Pricing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="how-it-works.html">
+                                How It Works
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Support & Legal -->
+                <div class="legalease-footer-column">
+
+                    <h3 class="legalease-footer-title">
+                        Support &amp; Legal
+                    </h3>
+
+                    <ul class="legalease-footer-links">
+
+                        <li>
+                            <a href="security-privacy.html">
+                                Security &amp; Privacy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Help &amp; Support
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="login.html">
+                                Login
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="dashboard.html">
+                                Dashboard
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+             Footer Bottom
+             ========================================== -->
+
+            <div class="legalease-footer-bottom">
+
+
+                <p class="legalease-copyright">
+                    © 2026 LegalEase. All rights reserved.
+                </p>
+
+
+                <div class="legalease-footer-bottom-links">
+
+                    <a href="security-privacy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms of Use
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Scroll To Top -->
+    <button type="button" class="legalease-scroll-top" id="legalease-scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ==========================================
+     JavaScript
+     ========================================== -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

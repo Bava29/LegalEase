@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="LegalEase - Simple and secure online legal document preparation.">
+
+    <title>LegalEase</title>
+
+    <!-- Google Font - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         DASHBOARD SIDEBAR
+    ====================================================== -->
+
+    <aside class="legalease-dashboard-sidebar" id="legalease-dashboard-sidebar">
+
+        <div class="legalease-dashboard-sidebar-inner">
+
+            <!-- Logo -->
+            <div class="legalease-dashboard-logo">
+
+                <a href="index.html">
+                    <img src="images/logo-light.png" alt="LegalEase">
+                </a>
+
+                <button type="button" class="legalease-dashboard-sidebar-close" id="legalease-dashboard-sidebar-close"
+                    aria-label="Close dashboard menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="legalease-dashboard-nav">
+
+                <span class="legalease-dashboard-nav-label">
+                    MAIN MENU
+                </span>
+
+                <a href="dashboard.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-pie-chart"></i>
+
+                    <span>Overview</span>
+
+                </a>
+
+
+                <a href="d2.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-regular fa-file-lines"></i>
+
+                    <span>My Documents</span>
+
+                </a>
+
+
+                <a href="d3.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-file-circle-plus"></i>
+
+                    <span>Create Document</span>
+
+                </a>
+
+
+                <a href="d4.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-regular fa-folder-open"></i>
+
+                    <span>Drafts</span>
+
+                </a>
+
+
+                <a href="d5.html" class="legalease-dashboard-nav-link">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <span>Document History</span>
+
+                </a>
+
+
+                <a href="d6.html" class="legalease-dashboard-nav-link active">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <span>Downloads</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="legalease-dashboard-sidebar-bottom">
+
+                <div class="legalease-dashboard-sidebar-mobile-account">
+                    <div class="legalease-dashboard-sidebar-mobile-actions">
+                        <button type="button" class="legalease-dashboard-sidebar-icon" aria-label="Notifications">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <button type="button" class="legalease-dashboard-sidebar-icon" aria-label="Settings">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                    </div>
+
+                    <button type="button" class="legalease-dashboard-sidebar-profile">
+                        <span class="legalease-dashboard-profile-image">
+                            <img src="images/profile.jpg" alt="Regina">
+                        </span>
+                        <span class="legalease-dashboard-profile-info">
+                            <strong>Regina</strong>
+                            <small>My Account</small>
+                        </span>
+                    </button>
+                </div>
+
+                <button type="button" class="legalease-dashboard-logout" id="legalease-dashboard-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         DASHBOARD HEADER
+    ====================================================== -->
+
+    <header class="legalease-dashboard-header">
+
+        <div class="legalease-dashboard-header-left">
+
+            <!-- Mobile / Tablet Toggle -->
+            <button type="button" class="legalease-dashboard-menu-toggle" id="legalease-dashboard-menu-toggle"
+                aria-label="Open dashboard menu" aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="legalease-dashboard-header-title">
+
+                <span>LEGAL WORKSPACE</span>
+
+                <h1>Downloads</h1>
+
+            </div>
+
+        </div>
+
+        <div class="legalease-dashboard-header-right">
+
+            <!-- Notifications -->
+            <button type="button" class="legalease-dashboard-header-icon" aria-label="Notifications">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="legalease-dashboard-notification-badge">
+                    3
+                </span>
+
+            </button>
+
+
+            <!-- Settings -->
+            <button type="button" class="legalease-dashboard-header-icon" aria-label="Settings">
+
+                <i class="fa-solid fa-gear"></i>
+
+            </button>
+
+
+            <!-- Dark Mode -->
+            <button type="button" class="legalease-dashboard-header-icon" id="legalease-dashboard-theme-toggle"
+                aria-label="Toggle dark mode" title="Dark Mode">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <!-- RTL -->
+            <button type="button" class="legalease-dashboard-header-icon" id="legalease-dashboard-rtl-toggle"
+                aria-label="Toggle RTL mode" title="RTL Mode">
+
+                <i class="fa-solid fa-right-left"></i>
+
+            </button>
+
+
+            <!-- Profile -->
+            <button type="button" class="legalease-dashboard-profile">
+
+                <span class="legalease-dashboard-profile-image">
+                    <img src="images/profile.jpg" alt="Regina">
+                </span>
+
+                <span class="legalease-dashboard-profile-info">
+                    <strong>Regina</strong>
+                    <small>My Account</small>
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="legalease-dashboard-sidebar-overlay" id="legalease-dashboard-sidebar-overlay">
+    </div>
+
+
+    <!-- =====================================================
+         LOGOUT CONFIRMATION POPUP
+    ====================================================== -->
+
+    <div class="legalease-dashboard-modal" id="legalease-dashboard-logout-modal" aria-hidden="true">
+
+        <div class="legalease-dashboard-modal-overlay" id="legalease-dashboard-modal-overlay">
+        </div>
+
+        <div class="legalease-dashboard-modal-card">
+
+            <div class="legalease-dashboard-modal-icon">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+
+            <h2>Logout?</h2>
+
+            <p>
+                Are you sure you want to logout from your
+                LegalEase workspace?
+            </p>
+
+            <div class="legalease-dashboard-modal-actions">
+
+                <button type="button" class="legalease-dashboard-modal-no" id="legalease-dashboard-logout-no">
+                    No
+                </button>
+
+                <button type="button" class="legalease-dashboard-modal-yes" id="legalease-dashboard-logout-yes">
+                    Yes, Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DASHBOARD MAIN
+    ====================================================== -->
+
+    <main class="legalease-dashboard-main">
+
+        <!-- SECTION 1 : DOWNLOADS INTRO -->
+        <section class="legalease-downloads-intro">
+
+            <div class="legalease-downloads-intro-content">
+
+                <span class="legalease-downloads-intro-label">
+                    DOCUMENT DOWNLOADS
+                </span>
+
+                <h2>
+                    Your completed documents,
+                    <span>ready when you need them.</span>
+                </h2>
+
+                <p>
+                    Access and download your completed LegalEase documents
+                    from one organized workspace. Keep copies available
+                    whenever you need to review or share them.
+                </p>
+
+            </div>
+
+
+            <div class="legalease-downloads-summary">
+
+                <div class="legalease-downloads-summary-icon">
+                    <i class="fa-solid fa-download"></i>
+                </div>
+
+                <div>
+                    <strong>04</strong>
+                    <span>Available Downloads</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 2 : DOWNLOAD SUMMARY -->
+        <section class="legalease-downloads-overview">
+
+            <div class="legalease-downloads-section-heading">
+
+                <div>
+                    <span>DOWNLOAD OVERVIEW</span>
+
+                    <h2>
+                        Your document library at a glance.
+                    </h2>
+                </div>
+
+                <a href="d2.html">
+                    View Documents
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="legalease-downloads-stat-grid">
+
+                <div class="legalease-downloads-stat-card">
+
+                    <div class="legalease-downloads-stat-icon">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Completed Documents</span>
+                    </div>
+
+                    <small>
+                        Ready to download
+                    </small>
+
+                </div>
+
+
+                <div class="legalease-downloads-stat-card">
+
+                    <div class="legalease-downloads-stat-icon">
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Available Files</span>
+                    </div>
+
+                    <small>
+                        PDF documents
+                    </small>
+
+                </div>
+
+
+                <div class="legalease-downloads-stat-card">
+
+                    <div class="legalease-downloads-stat-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <div>
+                        <strong>09</strong>
+                        <span>Download Activity</span>
+                    </div>
+
+                    <small>
+                        Across your workspace
+                    </small>
+
+                </div>
+
+
+                <div class="legalease-downloads-stat-card">
+
+                    <div class="legalease-downloads-stat-icon">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>Document Types</span>
+                    </div>
+
+                    <small>
+                        Will, POA &amp; Affidavit
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 3 : AVAILABLE DOWNLOADS -->
+        <section class="legalease-downloads-list">
+
+            <div class="legalease-downloads-section-heading">
+
+                <div>
+                    <span>AVAILABLE DOCUMENTS</span>
+
+                    <h2>
+                        Download your completed files.
+                    </h2>
+                </div>
+
+                <div class="legalease-downloads-filter">
+
+                    <button type="button" class="active">
+                        All
+                    </button>
+
+                    <button type="button">
+                        Wills
+                    </button>
+
+                    <button type="button">
+                        Power of Attorney
+                    </button>
+
+                    <button type="button">
+                        Affidavits
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="legalease-downloads-table-wrap">
+
+                <table class="legalease-downloads-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Document</th>
+                            <th>Type</th>
+                            <th>Completed</th>
+                            <th>File</th>
+                            <th>Status</th>
+                            <th>Download</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-downloads-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-scroll"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Family Will 2026</strong>
+                                        <small>LE-1024</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                Last Will &amp; Testament
+                            </td>
+
+                            <td>
+                                Sep 19, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-downloads-file">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    PDF
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="legalease-downloads-status">
+                                    Ready
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="#" class="legalease-download-button" aria-label="Download Family Will 2026">
+                                    <i class="fa-solid fa-download"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-downloads-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-file-signature"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Property Power of Attorney</strong>
+                                        <small>LE-1021</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                Power of Attorney
+                            </td>
+
+                            <td>
+                                Sep 17, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-downloads-file">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    PDF
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="legalease-downloads-status">
+                                    Ready
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="#" class="legalease-download-button"
+                                    aria-label="Download Property Power of Attorney">
+                                    <i class="fa-solid fa-download"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-downloads-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-file-lines"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Personal Affidavit</strong>
+                                        <small>LE-1018</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                Affidavit
+                            </td>
+
+                            <td>
+                                Sep 15, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-downloads-file">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    PDF
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="legalease-downloads-status">
+                                    Ready
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="#" class="legalease-download-button" aria-label="Download Personal Affidavit">
+                                    <i class="fa-solid fa-download"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="legalease-downloads-document">
+
+                                    <span>
+                                        <i class="fa-solid fa-scroll"></i>
+                                    </span>
+
+                                    <div>
+                                        <strong>Personal Will</strong>
+                                        <small>LE-1012</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                Last Will &amp; Testament
+                            </td>
+
+                            <td>
+                                Sep 10, 2026
+                            </td>
+
+                            <td>
+                                <span class="legalease-downloads-file">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    PDF
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="legalease-downloads-status">
+                                    Ready
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="#" class="legalease-download-button" aria-label="Download Personal Will">
+                                    <i class="fa-solid fa-download"></i>
+                                </a>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 4 : DOWNLOAD INFORMATION -->
+        <section class="legalease-downloads-info">
+
+            <div class="legalease-downloads-info-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+            </div>
+
+            <div class="legalease-downloads-info-content">
+
+                <span>
+                    YOUR DOCUMENTS
+                </span>
+
+                <h2>
+                    Keep a copy of your completed documents.
+                </h2>
+
+                <p>
+                    Completed documents are available as PDF files for
+                    convenient access. Download the latest completed
+                    version from your LegalEase workspace whenever needed.
+                </p>
+
+            </div>
+
+            <a href="d2.html" class="legalease-downloads-info-button">
+                View My Documents
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+     JavaScript
+     ========================================== -->
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

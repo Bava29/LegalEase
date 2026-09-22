@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="LegalEase - Simple and secure online legal document preparation.">
+
+    <title>LegalEase</title>
+
+    <!-- Google Font - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+     LegalEase Header
+     ========================================== -->
+
+    <header class="legalease-header">
+
+        <div class="legalease-header-container">
+
+
+            <!-- ==========================================
+             Logo
+             ========================================== -->
+
+            <a href="index.html" class="legalease-logo">
+
+                <img src="images/logo.png" alt="LegalEase">
+
+            </a>
+
+
+
+            <!-- ==========================================
+             Navigation Wrapper
+             ========================================== -->
+
+            <nav class="legalease-navigation" id="legalease-navigation" aria-label="Main Navigation">
+
+
+                <!-- ==========================================
+                 Main Menu
+                 ========================================== -->
+
+                <ul class="legalease-menu">
+
+
+                    <!-- Home Dropdown -->
+                    <li class="legalease-menu-item legalease-dropdown">
+
+                        <button type="button" class="legalease-menu-link legalease-dropdown-toggle">
+
+                            <span>Home</span>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <ul class="legalease-dropdown-menu">
+
+                            <li>
+                                <a href="index.html">
+                                    Home 1
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="home-2.html">
+                                    Home 2
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+
+                    <!-- About -->
+                    <li class="legalease-menu-item">
+
+                        <a href="about.html" class="legalease-menu-link">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Documents & Pricing -->
+                    <li class="legalease-menu-item">
+
+                        <a href="documents-pricing.html" class="legalease-menu-link">
+
+                            Documents &amp; Pricing
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- How It Works -->
+                    <li class="legalease-menu-item">
+
+                        <a href="how-it-works.html" class="legalease-menu-link">
+
+                            How It Works
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Security & Privacy -->
+                    <li class="legalease-menu-item">
+
+                        <a href="security-privacy.html" class="legalease-menu-link">
+
+                            Security &amp; Privacy
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Contact -->
+                    <li class="legalease-menu-item">
+
+                        <a href="contact.html" class="legalease-menu-link active">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- ==========================================
+                     Mobile Menu Actions
+                     ========================================== -->
+
+                    <li class="legalease-mobile-actions">
+
+
+                        <!-- Dark Mode -->
+                        <button type="button" class="legalease-action-btn" id="legalease-theme-toggle">
+
+                            <span>
+                                Dark Mode
+                            </span>
+
+                            <i class="fa-solid fa-moon"></i>
+
+                        </button>
+
+
+
+                        <!-- RTL Mode -->
+                        <button type="button" class="legalease-action-btn" id="legalease-rtl-toggle">
+
+                            <span>
+                                RTL Mode
+                            </span>
+
+                            <i class="fa-solid fa-right-left"></i>
+
+                        </button>
+
+
+
+                        <!-- Login -->
+                        <a href="login.html" class="legalease-login-btn">
+
+                            Login
+
+                        </a>
+
+
+
+                        <!-- Dashboard -->
+                        <a href="dashboard.html" class="legalease-dashboard-btn">
+
+                            Dashboard
+
+                        </a>
+
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- ==========================================
+             Desktop Header Actions
+             ========================================== -->
+
+            <div class="legalease-desktop-actions">
+
+
+                <!-- Dark Mode -->
+                <button type="button" class="legalease-header-toggle" id="legalease-theme-toggle-desktop"
+                    aria-label="Toggle dark mode" title="Dark Mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+
+                <!-- RTL Mode -->
+                <button type="button" class="legalease-header-toggle" id="legalease-rtl-toggle-desktop"
+                    aria-label="Toggle RTL mode" title="RTL Mode">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+
+                <!-- Login -->
+                <a href="login.html" class="legalease-login-btn">
+
+                    Login
+
+                </a>
+
+
+
+                <!-- Dashboard -->
+                <a href="dashboard.html" class="legalease-dashboard-btn">
+
+                    Dashboard
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+             Mobile Menu Toggle
+             ========================================== -->
+
+            <button type="button" class="legalease-mobile-toggle" id="legalease-mobile-toggle" aria-label="Open menu"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+    <!-- ==========================================
+     LEGALEASE - COMMON INNER HERO
+     ========================================== -->
+
+    <section class="legalease-inner-hero contact-banner">
+
+        <div class="legalease-inner-hero-overlay"></div>
+
+        <div class="legalease-inner-hero-container">
+
+            <div class="legalease-inner-hero-content">
+
+                <span class="legalease-inner-hero-label">
+                    GET IN TOUCH
+                </span>
+
+                <h1 class="legalease-inner-hero-title">
+                    Have a question?
+                    <span>We're here to help.</span>
+                </h1>
+
+                <p class="legalease-inner-hero-description">
+                    Whether you have a question about document preparation, your LegalEase workspace, or the process
+                    itself, we're here to help you find the right information.
+                </p>
+
+                <a href="contact.html" class="legalease-inner-hero-button">
+                    Contact Our Team
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+     CONTACT INFORMATION
+========================================== -->
+
+    <section class="legalease-contact-info">
+        <div class="legalease-contact-info-container">
+
+            <div class="legalease-contact-info-header">
+                <span class="legalease-contact-info-label">
+                    CONTACT US
+                </span>
+
+                <h2 class="legalease-contact-info-title">
+                    We're here to make
+                    <span>things clearer.</span>
+                </h2>
+
+                <p class="legalease-contact-info-description">
+                    Have a question about LegalEase? Reach out through
+                    any of the options below and our team will help you
+                    with the information you need.
+                </p>
+            </div>
+
+            <div class="legalease-contact-info-grid">
+
+                <!-- Card 01 -->
+                <div class="legalease-contact-info-card">
+
+                    <div class="legalease-contact-info-top">
+                        <div class="legalease-contact-info-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+
+                        <span class="legalease-contact-info-number">
+                            01
+                        </span>
+                    </div>
+
+                    <div class="legalease-contact-info-content">
+                        <h3>Email Support</h3>
+
+                        <p>
+                            Send us your questions and we'll help you
+                            understand the next step.
+                        </p>
+
+                        <span class="legalease-contact-info-detail">
+                            support@legalease.com
+                            <strong>Email Us</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- Card 02 -->
+                <div class="legalease-contact-info-card">
+
+                    <div class="legalease-contact-info-top">
+                        <div class="legalease-contact-info-icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+
+                        <span class="legalease-contact-info-number">
+                            02
+                        </span>
+                    </div>
+
+                    <div class="legalease-contact-info-content">
+                        <h3>Support Hours</h3>
+
+                        <p>
+                            Get in touch during our hours for
+                            assistance with your experience.
+                        </p>
+
+                        <span class="legalease-contact-info-detail">
+                            Monday – Friday
+                            <strong>9:00 AM – 6:00 PM</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- Card 03 -->
+                <div class="legalease-contact-info-card">
+
+                    <div class="legalease-contact-info-top">
+                        <div class="legalease-contact-info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <span class="legalease-contact-info-number">
+                            03
+                        </span>
+                    </div>
+
+                    <div class="legalease-contact-info-content">
+                        <h3>Our Location</h3>
+
+                        <p>
+                            Our team works to provide a simple and accessible
+                            online document preparation.
+                        </p>
+
+                        <span class="legalease-contact-info-detail">
+                            Online Support
+                            <strong>Available Worldwide</strong>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+     CONTACT FORM
+========================================== -->
+
+    <section class="legalease-contact-form-section" id="contact-form">
+        <div class="legalease-contact-form-container">
+
+            <div class="legalease-contact-form-content">
+
+                <span class="legalease-contact-form-label">
+                    SEND US A MESSAGE
+                </span>
+
+                <h2 class="legalease-contact-form-title">
+                    Let's make your
+                    <span>next step clearer.</span>
+                </h2>
+
+                <p class="legalease-contact-form-description">
+                    Have a question about preparing a document, using your
+                    workspace or getting started with LegalEase? Send us
+                    a message and our team will help.
+                </p>
+
+                <div class="legalease-contact-form-points">
+
+                    <div class="legalease-contact-form-point">
+                        <div class="legalease-contact-form-point-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <div>
+                            <h3>Questions about documents</h3>
+                            <p>
+                                Get help understanding the preparation
+                                process and available document types.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="legalease-contact-form-point">
+                        <div class="legalease-contact-form-point-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <div>
+                            <h3>Workspace support</h3>
+                            <p>
+                                Need help with drafts, document history
+                                or accessing your completed documents?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="legalease-contact-form-point">
+                        <div class="legalease-contact-form-point-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <div>
+                            <h3>General enquiries</h3>
+                            <p>
+                                Send us your question and we'll guide you
+                                toward the right information.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+
+            <div class="legalease-contact-form-card">
+
+                <form class="legalease-contact-form">
+
+                    <div class="legalease-contact-form-row">
+
+                        <div class="legalease-contact-field">
+                            <label for="contact-name">
+                                Full Name
+                            </label>
+
+                            <input type="text" id="contact-name" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="legalease-contact-field">
+                            <label for="contact-email">
+                                Email Address
+                            </label>
+
+                            <input type="email" id="contact-email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                    </div>
+
+                    <div class="legalease-contact-field">
+                        <label for="contact-document">
+                            Document Type
+                        </label>
+
+                        <select id="contact-document" name="document">
+
+                            <option value="" selected disabled>
+                                Select a document
+                            </option>
+
+                            <option value="will">
+                                Last Will &amp; Testament
+                            </option>
+
+                            <option value="power-of-attorney">
+                                Power of Attorney
+                            </option>
+
+                            <option value="affidavit">
+                                Affidavit
+                            </option>
+
+                            <option value="general">
+                                General Enquiry
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div class="legalease-contact-field">
+                        <label for="contact-subject">
+                            Subject
+                        </label>
+
+                        <input type="text" id="contact-subject" name="subject" placeholder="What can we help with?"
+                            required>
+                    </div>
+
+                    <div class="legalease-contact-field">
+                        <label for="contact-message">
+                            Message
+                        </label>
+
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="legalease-contact-form-submit">
+
+                        Send Message
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                    <div class="legalease-contact-form-note">
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+                            Your information is handled securely and
+                            used only to respond to your enquiry.
+                        </span>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+     CONTACT LOCATION / MAP
+========================================== -->
+
+    <section class="legalease-contact-location">
+        <div class="legalease-contact-location-container">
+
+            <div class="legalease-contact-location-content">
+
+                <span class="legalease-contact-location-label">
+                    FIND US
+                </span>
+
+                <h2 class="legalease-contact-location-title">
+                    We're here to
+                    <span>help you connect.</span>
+                </h2>
+
+                <p class="legalease-contact-location-description">
+                    Have questions about LegalEase? Reach out to our
+                    team and we'll help you understand the next steps
+                    in your document preparation journey.
+                </p>
+
+                <div class="legalease-contact-location-details">
+
+                    <div class="legalease-contact-location-detail">
+                        <div class="legalease-contact-location-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <span>Location</span>
+                            <strong>Chennai, Tamil Nadu</strong>
+                        </div>
+                    </div>
+
+                    <div class="legalease-contact-location-detail">
+                        <div class="legalease-contact-location-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <span>Email</span>
+                            <strong>support@legalease.com</strong>
+                        </div>
+                    </div>
+
+                    <div class="legalease-contact-location-detail">
+                        <div class="legalease-contact-location-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+
+                        <div>
+                            <span>Support</span>
+                            <strong>Online Assistance Available</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- GOOGLE MAP -->
+
+            <div class="legalease-contact-map">
+                <iframe src="https://www.google.com/maps?q=Chennai,Tamil%20Nadu&output=embed" width="100%" height="100%"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="LegalEase Location">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+     LegalEase Footer
+     ========================================== -->
+
+    <footer class="legalease-footer">
+
+        <div class="legalease-footer-container">
+
+
+            <!-- ==========================================
+             Footer Main
+             ========================================== -->
+
+            <div class="legalease-footer-main">
+
+
+                <!-- Brand -->
+                <div class="legalease-footer-brand">
+
+                    <a href="index.html" class="legalease-footer-logo">
+
+                        <img src="images/logo-light.png" alt="LegalEase">
+
+                    </a>
+
+                    <p class="legalease-footer-description">
+                        Create important legal documents through a
+                        simple, guided and secure online experience.
+                    </p>
+
+                    <a href="documents-pricing.html" class="legalease-footer-cta">
+
+                        Get Started
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Quick Links -->
+                <div class="legalease-footer-column">
+
+                    <h3 class="legalease-footer-title">
+                        Quick Links
+                    </h3>
+
+                    <ul class="legalease-footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Documents &amp; Pricing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="how-it-works.html">
+                                How It Works
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Legal Documents -->
+                <div class="legalease-footer-column">
+
+                    <h3 class="legalease-footer-title">
+                        Legal Documents
+                    </h3>
+
+                    <ul class="legalease-footer-links">
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Wills
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Power of Attorney
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Affidavits
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="documents-pricing.html">
+                                Document Pricing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="how-it-works.html">
+                                How It Works
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Support & Legal -->
+                <div class="legalease-footer-column">
+
+                    <h3 class="legalease-footer-title">
+                        Support &amp; Legal
+                    </h3>
+
+                    <ul class="legalease-footer-links">
+
+                        <li>
+                            <a href="security-privacy.html">
+                                Security &amp; Privacy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Help &amp; Support
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="login.html">
+                                Login
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="dashboard.html">
+                                Dashboard
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+             Footer Bottom
+             ========================================== -->
+
+            <div class="legalease-footer-bottom">
+
+
+                <p class="legalease-copyright">
+                    © 2026 LegalEase. All rights reserved.
+                </p>
+
+
+                <div class="legalease-footer-bottom-links">
+
+                    <a href="security-privacy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms of Use
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Scroll To Top -->
+    <button type="button" class="legalease-scroll-top" id="legalease-scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ==========================================
+     JavaScript
+     ========================================== -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
