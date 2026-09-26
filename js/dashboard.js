@@ -247,7 +247,13 @@ function closeLogoutModal() {
 if (dashboardLogout) {
 
     dashboardLogout.addEventListener("click", function () {
+
+        /* Close responsive sidebar first */
+        closeDashboardSidebar();
+
+        /* Then open logout confirmation */
         openLogoutModal();
+
     });
 
 }
