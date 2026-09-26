@@ -26964,3 +26964,185 @@ html[dir="rtl"] .legalease-register-card .legalease-register-login {
         padding: 12px 22px !important;
     }
 }
+
+/* =========================================================
+   HOME 1 - iPAD MINI PORTRAIT
+   REDUCE EXCESSIVE SPACING
+   768px - 820px
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 820px) {
+
+    /* ---------- HERO ---------- */
+
+    .legalease-hero-container {
+        gap: 28px !important;
+        padding: 40px 24px 48px !important;
+    }
+
+    .legalease-hero-content {
+        max-width: 100% !important;
+    }
+
+    .legalease-hero-title {
+        font-size: 38px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .legalease-hero-description {
+        max-width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .legalease-hero-buttons {
+        margin-bottom: 20px !important;
+    }
+
+    .legalease-hero-image-wrap {
+        max-width: 100% !important;
+    }
+
+    .legalease-hero-image {
+        height: 360px !important;
+    }
+
+
+    /* ---------- DOCUMENTS ---------- */
+
+    .legalease-documents-section {
+        padding: 60px 0 65px !important;
+    }
+
+    .legalease-documents-container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .legalease-documents-heading {
+        margin-bottom: 28px !important;
+        gap: 15px !important;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .legalease-process-section {
+        padding: 65px 0 !important;
+    }
+
+    .legalease-process-container {
+        gap: 35px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+
+    /* ---------- BENEFITS ---------- */
+
+    .legalease-benefits-section {
+        padding: 65px 0 !important;
+    }
+
+    .legalease-benefits-container {
+        gap: 35px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+
+    /* ---------- SECURITY ---------- */
+
+    .legalease-security-section {
+        padding: 65px 0 !important;
+    }
+
+    .legalease-security-container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .legalease-security-heading {
+        margin-bottom: 30px !important;
+        gap: 20px !important;
+    }
+
+    .legalease-security-grid {
+        gap: 14px !important;
+    }
+
+
+    /* ---------- PRICING ---------- */
+
+    .legalease-pricing-section {
+        padding: 65px 0 !important;
+    }
+
+    .legalease-pricing-container {
+        gap: 35px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+
+    /* ---------- WORKSPACE ---------- */
+
+    .legalease-workspace-section {
+        padding: 65px 0 !important;
+    }
+
+    .legalease-workspace-container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+
+    /* ---------- FINAL CTA ---------- */
+
+    .legalease-final-section {
+        padding: 65px 0 !important;
+    }
+
+    .legalease-final-container {
+        gap: 35px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
+
+/* =========================================================
+   LOGIN + REGISTER - MOBILE LOGO SIZE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .legalease-login-logo img,
+    .legalease-register-logo img {
+        width: 190px !important;
+        max-width: 190px !important;
+        height: auto !important;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    .legalease-login-logo img,
+    .legalease-register-logo img {
+        width: 180px !important;
+        max-width: 180px !important;
+        height: auto !important;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .legalease-login-logo img,
+    .legalease-register-logo img {
+        width: 175px !important;
+        max-width: 175px !important;
+        height: auto !important;
+    }
+
+}

@@ -12426,3 +12426,383 @@ html[dir="rtl"] .legalease-drafts-table-action i {
         flex-shrink: 0 !important;
     }
 }
+
+/* =========================================================
+   DASHBOARD - DARK MODE HOVER TEXT VISIBILITY FIX
+   ========================================================= */
+
+html.dark-mode .legalease-overview-create-btn:hover {
+    color: #FFFFFF !important;
+    background-color: #5A8BC0 !important;
+    border-color: #5A8BC0 !important;
+}
+
+html.dark-mode .legalease-overview-create-btn:hover i {
+    color: #FFFFFF !important;
+}
+
+/* =========================================================
+   MY DOCUMENTS - iPAD MINI
+   FINAL ACTION COLUMN VISIBILITY FIX
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 820px) {
+
+    .legalease-documents-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        padding-right: 20px !important;
+        padding-bottom: 8px !important;
+
+        box-sizing: border-box !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .legalease-documents-table-header,
+    .legalease-documents-table-row {
+        width: 900px !important;
+        min-width: 900px !important;
+
+        box-sizing: border-box !important;
+
+        grid-template-columns:
+            minmax(220px, 2fr) minmax(115px, 1.1fr) minmax(105px, 1fr) minmax(100px, .9fr) 125px !important;
+
+        gap: 14px !important;
+
+        padding-left: 20px !important;
+        padding-right: 40px !important;
+    }
+
+    /* Last Action column */
+    .legalease-documents-table-header>span:last-child,
+    .legalease-documents-table-row>.legalease-documents-actions {
+        width: 125px !important;
+        min-width: 125px !important;
+        box-sizing: border-box !important;
+    }
+
+    .legalease-documents-actions {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        gap: 7px !important;
+
+        padding-left: 4px !important;
+        padding-right: 8px !important;
+
+        overflow: visible !important;
+    }
+
+    .legalease-documents-actions button {
+        flex: 0 0 30px !important;
+        width: 30px !important;
+        height: 30px !important;
+
+        box-sizing: border-box !important;
+    }
+
+}
+
+/* =========================================================
+   DRAFTS TABLE - MOBILE KEEP ORIGINAL TABLE COLUMNS
+   HORIZONTAL SCROLL
+   STRONG OVERRIDE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Table wrapper becomes horizontal scroll area */
+    .legalease-drafts-list-section .legalease-drafts-table-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: transparent !important;
+        border: 0 !important;
+
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    /* Keep original table width */
+    .legalease-drafts-list-section .legalease-drafts-table {
+        display: table !important;
+
+        width: 100% !important;
+        min-width: 760px !important;
+
+        margin: 0 !important;
+        border-spacing: 0 !important;
+        border-collapse: separate !important;
+    }
+
+    /* Restore normal table body */
+    .legalease-drafts-list-section .legalease-drafts-table tbody {
+        display: table-row-group !important;
+        width: auto !important;
+    }
+
+    /* Restore normal table rows */
+    .legalease-drafts-list-section .legalease-drafts-table tbody tr {
+        display: table-row !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border-radius: 0 !important;
+
+        background-color: #182332 !important;
+        border: 0 !important;
+
+        box-shadow: none !important;
+    }
+
+    /* Restore normal table cells */
+    .legalease-drafts-list-section .legalease-drafts-table td {
+        display: table-cell !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+
+        padding: 14px 16px !important;
+
+        vertical-align: middle !important;
+
+        border-bottom: 1px solid #2F3B4B !important;
+        background: transparent !important;
+    }
+
+    /* Remove mobile first-column full width */
+    .legalease-drafts-list-section .legalease-drafts-table td:first-child {
+        grid-column: unset !important;
+        width: auto !important;
+    }
+
+    /* Keep document column in one line */
+    .legalease-drafts-list-section .legalease-drafts-table-document {
+        width: 190px !important;
+        min-width: 190px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        white-space: nowrap !important;
+    }
+
+    /* Document icon */
+    .legalease-drafts-list-section .legalease-drafts-table-document>span {
+        flex: 0 0 38px !important;
+    }
+
+    /* Document title */
+    .legalease-drafts-list-section .legalease-drafts-table-document strong {
+        white-space: nowrap !important;
+    }
+
+    /* Document small text */
+    .legalease-drafts-list-section .legalease-drafts-table-document small {
+        white-space: nowrap !important;
+    }
+
+    /* Keep all other columns from wrapping */
+    .legalease-drafts-list-section .legalease-drafts-table td:not(:first-child) {
+        white-space: nowrap !important;
+    }
+
+    /* Progress column */
+    .legalease-drafts-list-section .legalease-drafts-table-progress {
+        min-width: 145px !important;
+    }
+
+    /* Status column */
+    .legalease-drafts-list-section .legalease-drafts-table-status {
+        white-space: nowrap !important;
+    }
+
+    /* Action column */
+    .legalease-drafts-list-section .legalease-drafts-table-action {
+        white-space: nowrap !important;
+    }
+
+    /* Keep table header as normal table row */
+    .legalease-drafts-list-section .legalease-drafts-table thead {
+        display: table-header-group !important;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table thead tr {
+        display: table-row !important;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table th {
+        display: table-cell !important;
+
+        white-space: nowrap !important;
+        padding: 13px 16px !important;
+    }
+
+    /* Visible scrollbar */
+    .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-track {
+        background: #202E3E;
+        border-radius: 10px;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-thumb {
+        background: #4A6078;
+        border-radius: 10px;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-thumb:hover {
+        background: #7EAAD5;
+    }
+}
+
+
+/* =========================================================
+   400px - SAME TABLE + SCROLL
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .legalease-drafts-list-section .legalease-drafts-table {
+        min-width: 760px !important;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table-wrap {
+        overflow-x: auto !important;
+    }
+}
+
+/* =========================================================
+   LOGOUT POPUP - RESPONSIVE SIDEBAR FIX
+   Sidebar must close when logout popup opens
+   ========================================================= */
+
+.legalease-dashboard-modal {
+    z-index: 99999 !important;
+}
+
+.legalease-dashboard-modal-overlay {
+    z-index: 1 !important;
+}
+
+.legalease-dashboard-modal-card {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .legalease-dashboard-modal {
+        position: fixed !important;
+        inset: 0 !important;
+
+        width: 100vw !important;
+        height: 100vh !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 20px !important;
+
+        z-index: 99999 !important;
+    }
+
+    .legalease-dashboard-modal-card {
+        width: min(390px, calc(100vw - 40px)) !important;
+        max-width: 390px !important;
+
+        margin: auto !important;
+
+        z-index: 2 !important;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .legalease-dashboard-modal {
+        padding: 16px !important;
+    }
+
+    .legalease-dashboard-modal-card {
+        width: calc(100vw - 32px) !important;
+        max-width: none !important;
+
+        padding: 28px 20px 24px !important;
+        border-radius: 14px !important;
+    }
+
+    .legalease-dashboard-modal-card h2 {
+        font-size: 20px !important;
+    }
+
+    .legalease-dashboard-modal-card p {
+        font-size: 12px !important;
+        max-width: 280px !important;
+    }
+
+    .legalease-dashboard-modal-actions {
+        gap: 8px !important;
+    }
+
+    .legalease-dashboard-modal-actions button {
+        min-width: 100px !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .legalease-dashboard-modal {
+        padding: 12px !important;
+    }
+
+    .legalease-dashboard-modal-card {
+        width: calc(100vw - 24px) !important;
+        padding: 25px 17px 21px !important;
+    }
+
+    .legalease-dashboard-modal-icon {
+        width: 48px !important;
+        height: 48px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .legalease-dashboard-modal-actions button {
+        min-width: 95px !important;
+        min-height: 38px !important;
+    }
+
+}
