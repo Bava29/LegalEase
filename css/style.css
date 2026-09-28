@@ -177,7 +177,7 @@ button {
 
 .section {
     width: 100%;
-    padding: 90px 0;
+    padding: 80px 0;
 }
 
 .section-heading {
@@ -444,7 +444,7 @@ label {
     }
 
     .section {
-        padding: 70px 0;
+        padding: 64px 0;
     }
 
     .section-title {
@@ -461,7 +461,7 @@ label {
     }
 
     .section {
-        padding: 60px 0;
+        padding: 54px 0;
     }
 
     .section-title {
@@ -481,7 +481,7 @@ label {
 @media (max-width: 575px) {
 
     .section {
-        padding: 50px 0;
+        padding: 46px 0;
     }
 
     .section-title {
@@ -27145,4 +27145,815 @@ html[dir="rtl"] .legalease-register-card .legalease-register-login {
         height: auto !important;
     }
 
+}
+
+/* Keep generous hero sections while tightening page-to-page section rhythm. */
+.legalease-documents-section {
+    padding-top: 82px;
+    padding-bottom: 86px;
+}
+
+.legalease-process-section {
+    padding-top: 104px;
+    padding-bottom: 104px;
+}
+
+.legalease-benefits-section,
+.legalease-security-section {
+    padding-top: 108px;
+    padding-bottom: 108px;
+}
+
+.legalease-workspace-section {
+    padding-top: 90px;
+    padding-bottom: 48px;
+}
+
+.legalease-pricing-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.legalease-final-section {
+    padding-top: 48px;
+    padding-bottom: 94px;
+}
+
+.legalease-contact-form-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+/* ==========================================
+   WORKSPACE - IMAGE PREVIEW
+   ========================================== */
+
+.legalworkspace-image-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.legalworkspace-preview-image {
+    width: 100%;
+    max-width: 620px;
+    height: 520px !important;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+
+    .legalworkspace-preview-image {
+        height: 360px !important;
+        max-height: 360px !important;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .legalworkspace-preview-image {
+        height: 300px !important;
+        max-height: 300px !important;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .legalworkspace-preview-image {
+        height: 260px !important;
+        max-height: 260px !important;
+    }
+
+}
+
+/* ==========================================
+   LEGALEASE AT A GLANCE
+   ========================================== */
+
+.legalglance-section {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #F5F7FA;
+    overflow: hidden;
+}
+
+.legalglance-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* ==========================================
+   IMAGE
+   ========================================== */
+
+.legalglance-visual {
+    position: relative;
+
+    width: 100%;
+    height: 570px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background-color: #E7EEF5;
+}
+
+.legalglance-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 205%;
+    max-width: none;
+
+    height: 100%;
+
+    object-fit: cover;
+    object-position: left center;
+
+    display: block;
+}
+
+
+/* ==========================================
+   CONTENT
+   ========================================== */
+
+.legalglance-content {
+    width: 100%;
+}
+
+.legalglance-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #6F8298;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.6px;
+}
+
+.legalglance-title {
+    margin: 0 0 17px;
+
+    color: #172A46;
+
+    font-size: 40px;
+    font-weight: 600;
+
+    line-height: 1.18;
+}
+
+.legalglance-title span {
+    display: block;
+    color: #2F5D8F;
+}
+
+.legalglance-description {
+    max-width: 560px;
+
+    margin: 0 0 28px;
+
+    color: #718092;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   FEATURE GRID
+   ========================================== */
+
+.legalglance-features {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   CARD
+   ========================================== */
+
+.legalglance-card {
+    position: relative;
+
+    min-height: 175px;
+
+    padding: 21px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #DDE3EA;
+    border-radius: 11px;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.legalglance-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #B9C8D8;
+
+    box-shadow: 0 12px 28px rgba(23, 42, 70, .08);
+}
+
+
+/* ==========================================
+   CARD TOP
+   ========================================== */
+
+.legalglance-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 19px;
+}
+
+
+/* ==========================================
+   ICON
+   ========================================== */
+
+.legalglance-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #2F5D8F;
+
+    background-color: #EEF3F8;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   NUMBER
+   ========================================== */
+
+.legalglance-number {
+    color: #C4CFDA;
+
+    font-size: 23px;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+/* ==========================================
+   CARD CONTENT
+   ========================================== */
+
+.legalglance-card h3 {
+    margin: 0 0 7px;
+
+    color: #172A46;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.legalglance-card p {
+    margin: 0;
+
+    color: #718092;
+
+    font-size: 12.5px;
+    font-weight: 400;
+
+    line-height: 1.65;
+}
+
+
+/* ==========================================
+   BUTTON
+   ========================================== */
+
+.legalglance-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 13px 20px;
+
+    color: #FFFFFF;
+
+    background-color: #172A46;
+
+    border: 1px solid #172A46;
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: all .3s ease;
+}
+
+.legalglance-button i {
+    font-size: 11px;
+
+    transition: transform .3s ease;
+}
+
+.legalglance-button:hover {
+    color: #172A46;
+    background-color: transparent;
+}
+
+.legalglance-button:hover i {
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   LEGALEASE AT A GLANCE - DARK MODE
+   ========================================================= */
+
+html.dark-mode .legalglance-section {
+    background-color: #121B28 !important;
+}
+
+
+/* ==========================================
+   CONTENT
+   ========================================== */
+
+html.dark-mode .legalglance-label {
+    color: #8FA6BC !important;
+}
+
+html.dark-mode .legalglance-title {
+    color: #E7ECF2 !important;
+}
+
+html.dark-mode .legalglance-title span {
+    color: #7EAAD5 !important;
+}
+
+html.dark-mode .legalglance-description {
+    color: #AEB9C7 !important;
+}
+
+
+/* ==========================================
+   IMAGE AREA
+   ========================================== */
+
+html.dark-mode .legalglance-visual {
+    background-color: #182332 !important;
+}
+
+
+/* ==========================================
+   FEATURE CARDS
+   ========================================== */
+
+html.dark-mode .legalglance-card {
+    background-color: #182332 !important;
+    border-color: #2F3B4B !important;
+}
+
+html.dark-mode .legalglance-card:hover {
+    border-color: #45627F !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28) !important;
+}
+
+
+/* ==========================================
+   CARD ICON
+   ========================================== */
+
+html.dark-mode .legalglance-icon {
+    color: #9FC0DF !important;
+    background-color: #24364A !important;
+}
+
+
+/* ==========================================
+   CARD NUMBER
+   ========================================== */
+
+html.dark-mode .legalglance-number {
+    color: #627A93 !important;
+}
+
+
+/* ==========================================
+   CARD CONTENT
+   ========================================== */
+
+html.dark-mode .legalglance-card h3 {
+    color: #E7ECF2 !important;
+}
+
+html.dark-mode .legalglance-card p {
+    color: #AEB9C7 !important;
+}
+
+
+/* ==========================================
+   BUTTON
+   ========================================== */
+
+html.dark-mode .legalglance-button {
+    color: #FFFFFF !important;
+    background-color: #2F5D8F !important;
+    border-color: #2F5D8F !important;
+}
+
+html.dark-mode .legalglance-button:hover {
+    color: #FFFFFF !important;
+    background-color: #4A7DB3 !important;
+    border-color: #4A7DB3 !important;
+}
+
+html.dark-mode .legalglance-button:hover i {
+    color: #FFFFFF !important;
+}
+
+/* =========================================================
+   LEGALEASE AT A GLANCE - RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   1200px - 1101px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .legalglance-container {
+        max-width: 1100px;
+        gap: 50px;
+        padding: 0 28px;
+    }
+
+    .legalglance-visual {
+        height: 520px;
+    }
+
+    .legalglance-title {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   1100px - 992px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .legalglance-section {
+        padding: 80px 0;
+    }
+
+    .legalglance-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+        padding: 0 25px;
+    }
+
+    .legalglance-visual {
+        height: 500px;
+        border-radius: 20px;
+    }
+
+    .legalglance-title {
+        font-size: 33px;
+    }
+
+    .legalglance-description {
+        font-size: 14px;
+    }
+
+    .legalglance-features {
+        gap: 12px;
+    }
+
+    .legalglance-card {
+        min-height: 165px;
+        padding: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   iPAD / PORTRAIT TABLET
+   991px - 768px
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .legalglance-section {
+        padding: 70px 0;
+    }
+
+    .legalglance-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+
+        max-width: 850px;
+        padding: 0 25px;
+    }
+
+    .legalglance-visual {
+        width: 100%;
+        height: 450px;
+        border-radius: 20px;
+    }
+
+    .legalglance-content {
+        width: 100%;
+    }
+
+    .legalglance-title {
+        max-width: 650px;
+        font-size: 36px;
+    }
+
+    .legalglance-description {
+        max-width: 650px;
+    }
+
+    .legalglance-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .legalglance-card {
+        min-height: 175px;
+    }
+
+}
+
+
+/* =========================================================
+   iPAD MINI / SMALL TABLET
+   820px - 768px
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+    .legalglance-section {
+        padding: 65px 0;
+    }
+
+    .legalglance-container {
+        gap: 38px;
+        padding: 0 22px;
+    }
+
+    .legalglance-visual {
+        height: 410px;
+    }
+
+    .legalglance-title {
+        font-size: 34px;
+    }
+
+    .legalglance-card {
+        padding: 19px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   767px - 576px
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .legalglance-section {
+        padding: 60px 0;
+    }
+
+    .legalglance-container {
+        width: 100%;
+        padding: 0 18px;
+        gap: 35px;
+    }
+
+    .legalglance-visual {
+        height: 360px;
+        border-radius: 17px;
+    }
+
+    .legalglance-title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .legalglance-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .legalglance-features {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .legalglance-card {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .legalglance-card-top {
+        margin-bottom: 16px;
+    }
+
+    .legalglance-button {
+        padding: 12px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   575px - 401px
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .legalglance-section {
+        padding: 50px 0;
+    }
+
+    .legalglance-container {
+        padding: 0 16px;
+        gap: 30px;
+    }
+
+    .legalglance-visual {
+        height: 320px;
+        border-radius: 15px;
+    }
+
+    .legalglance-label {
+        font-size: 11px;
+        letter-spacing: 1.3px;
+        margin-bottom: 12px;
+    }
+
+    .legalglance-title {
+        font-size: 27px;
+    }
+
+    .legalglance-description {
+        font-size: 13.5px;
+        margin-bottom: 23px;
+    }
+
+    .legalglance-card {
+        padding: 18px;
+    }
+
+    .legalglance-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .legalglance-number {
+        font-size: 21px;
+    }
+
+    .legalglance-card h3 {
+        font-size: 15px;
+    }
+
+    .legalglance-card p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   400px AND BELOW
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .legalglance-section {
+        padding: 45px 0;
+    }
+
+    .legalglance-container {
+        padding: 0 14px;
+        gap: 27px;
+    }
+
+    .legalglance-visual {
+        height: 275px;
+        border-radius: 13px;
+    }
+
+    .legalglance-title {
+        font-size: 25px;
+    }
+
+    .legalglance-description {
+        font-size: 13px;
+    }
+
+    .legalglance-card {
+        padding: 16px;
+    }
+
+    .legalglance-card-top {
+        margin-bottom: 14px;
+    }
+
+    .legalglance-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .legalglance-number {
+        font-size: 19px;
+    }
+
+    .legalglance-card h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .legalglance-card p {
+        font-size: 11.5px;
+        line-height: 1.6;
+    }
+
+    .legalglance-button {
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+}
+
+/* ==========================================
+   HERO SECONDARY BUTTON - DARK MODE FIX
+   ========================================== */
+
+html.dark-mode .legalease-hero-secondary-btn {
+    color: #FFFFFF !important;
+    background-color: #303B4A !important;
+    border-color: #4B596A !important;
+}
+
+html.dark-mode .legalease-hero-secondary-btn:hover {
+    color: #FFFFFF !important;
+    background-color: #3C4B5E !important;
+    border-color: #5A6B80 !important;
 }

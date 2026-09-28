@@ -177,7 +177,7 @@ button {
 
 .section {
     width: 100%;
-    padding: 90px 0;
+    padding: 80px 0;
 }
 
 .section-heading {
@@ -393,7 +393,7 @@ label {
     }
 
     .section {
-        padding: 70px 0;
+        padding: 64px 0;
     }
 
     .section-title {
@@ -410,7 +410,7 @@ label {
     }
 
     .section {
-        padding: 60px 0;
+        padding: 54px 0;
     }
 
     .section-title {
@@ -430,7 +430,7 @@ label {
 @media (max-width: 575px) {
 
     .section {
-        padding: 50px 0;
+        padding: 46px 0;
     }
 
     .section-title {
@@ -12805,4 +12805,236 @@ html.dark-mode .legalease-overview-create-btn:hover i {
         min-height: 38px !important;
     }
 
+}
+
+/* Slightly tighter vertical rhythm between dashboard sections. */
+.legalease-drafts-list-section,
+.legalease-history-summary-section,
+.legalease-history-list-section {
+    margin-bottom: 26px;
+}
+
+/* =========================================================
+   DRAFT TABLE - MOBILE
+   LIGHT MODE = LIGHT TABLE
+   DARK MODE = DARK TABLE
+   SAME TABLE + HORIZONTAL SCROLL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Table wrapper */
+    .legalease-drafts-list-section .legalease-drafts-table-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        background-color: var(--white-color) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 14px !important;
+
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+
+    /* Keep actual table structure */
+    .legalease-drafts-list-section .legalease-drafts-table {
+        display: table !important;
+
+        width: 100% !important;
+        min-width: 760px !important;
+
+        border-collapse: collapse !important;
+        border-spacing: 0 !important;
+
+        background-color: var(--white-color) !important;
+    }
+
+
+    /* Normal table body */
+    .legalease-drafts-list-section .legalease-drafts-table tbody {
+        display: table-row-group !important;
+        width: auto !important;
+    }
+
+
+    /* Normal table rows */
+    .legalease-drafts-list-section .legalease-drafts-table tbody tr {
+        display: table-row !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background-color: var(--white-color) !important;
+
+        border: 0 !important;
+        border-radius: 0 !important;
+
+        box-shadow: none !important;
+    }
+
+
+    /* Normal table cells */
+    .legalease-drafts-list-section .legalease-drafts-table td {
+        display: table-cell !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+
+        padding: 14px 16px !important;
+
+        vertical-align: middle !important;
+
+        color: var(--text-color) !important;
+
+        background-color: var(--white-color) !important;
+
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+
+
+    /* Header */
+    .legalease-drafts-list-section .legalease-drafts-table thead {
+        display: table-header-group !important;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table thead tr {
+        display: table-row !important;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table th {
+        display: table-cell !important;
+
+        padding: 13px 16px !important;
+
+        color: #7F8B99 !important;
+        background-color: #F8F9FB !important;
+
+        border-bottom: 1px solid var(--border-color) !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* Document column */
+    .legalease-drafts-list-section .legalease-drafts-table-document {
+        width: 190px !important;
+        min-width: 190px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* Document icon */
+    .legalease-drafts-list-section .legalease-drafts-table-document>span {
+        flex: 0 0 38px !important;
+    }
+
+
+    /* Document title */
+    .legalease-drafts-list-section .legalease-drafts-table-document strong {
+        white-space: nowrap !important;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table-document small {
+        white-space: nowrap !important;
+    }
+
+
+    /* Other columns */
+    .legalease-drafts-list-section .legalease-drafts-table td:not(:first-child) {
+        white-space: nowrap !important;
+    }
+
+
+    /* Progress */
+    .legalease-drafts-list-section .legalease-drafts-table-progress {
+        min-width: 145px !important;
+    }
+
+
+    /* Status */
+    .legalease-drafts-list-section .legalease-drafts-table-status {
+        white-space: nowrap !important;
+    }
+
+
+    /* Action */
+    .legalease-drafts-list-section .legalease-drafts-table-action {
+        white-space: nowrap !important;
+    }
+
+
+    /* Light mode scrollbar */
+    .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-track {
+        background: #E8EDF2;
+        border-radius: 10px;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-thumb {
+        background: #A8B4C1;
+        border-radius: 10px;
+    }
+
+    .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-thumb:hover {
+        background: #6F8499;
+    }
+}
+
+
+/* =========================================================
+   DARK MODE - ONLY WHEN DARK MODE IS ACTIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    html.dark-mode .legalease-drafts-list-section .legalease-drafts-table-wrap {
+        background-color: #182332 !important;
+        border-color: #2F3B4B !important;
+    }
+
+    html.dark-mode .legalease-drafts-list-section .legalease-drafts-table {
+        background-color: #182332 !important;
+    }
+
+    html.dark-mode .legalease-drafts-list-section .legalease-drafts-table tbody tr {
+        background-color: #182332 !important;
+    }
+
+    html.dark-mode .legalease-drafts-list-section .legalease-drafts-table td {
+        color: #AEB9C7 !important;
+        background-color: #182332 !important;
+        border-bottom-color: #2F3B4B !important;
+    }
+
+    html.dark-mode .legalease-drafts-list-section .legalease-drafts-table th {
+        color: #B5C3D1 !important;
+        background-color: #202E3E !important;
+        border-bottom-color: #344457 !important;
+    }
+
+    html.dark-mode .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-track {
+        background: #202E3E;
+    }
+
+    html.dark-mode .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-thumb {
+        background: #4A6078;
+    }
+
+    html.dark-mode .legalease-drafts-list-section .legalease-drafts-table-wrap::-webkit-scrollbar-thumb:hover {
+        background: #7EAAD5;
+    }
 }
