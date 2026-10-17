@@ -777,9 +777,9 @@ label {
 
     padding: 10px 18px;
 
-    color: var(--primary-color);
+    color: var(--white-color);
 
-    background-color: transparent;
+    background-color: var(--primary-color);
 
     border: 1px solid var(--primary-color);
 
@@ -815,9 +815,9 @@ label {
 
     padding: 10px 18px;
 
-    color: var(--white-color);
+    color: var(--primary-color);
 
-    background-color: var(--primary-color);
+    background-color: transparent;
 
     border: 1px solid var(--primary-color);
 
@@ -834,9 +834,9 @@ label {
 
 
 .legalease-dashboard-btn:hover {
-    color: var(--primary-color);
+    color: var(--white-color);
 
-    background-color: transparent;
+    background-color: var(--primary-color);
 }
 
 
@@ -1120,16 +1120,16 @@ label {
 
 
     .legalease-mobile-actions .legalease-login-btn {
-        color: var(--primary-color);
+        color: var(--white-color);
 
-        background-color: transparent;
+        background-color: var(--primary-color);
     }
 
 
     .legalease-mobile-actions .legalease-dashboard-btn {
-        color: var(--white-color);
+        color: var(--primary-color);
 
-        background-color: var(--primary-color);
+        background-color: transparent;
     }
 
 }
@@ -4676,7 +4676,6 @@ label {
     background-color: var(--white-color);
     border-color: var(--white-color);
 }
-
 
 /* ==========================================
    Trust Items
@@ -27956,4 +27955,260 @@ html.dark-mode .legalease-hero-secondary-btn:hover {
     color: #FFFFFF !important;
     background-color: #3C4B5E !important;
     border-color: #5A6B80 !important;
+}
+
+/* Keep the header Login action primary and Dashboard action secondary in dark mode. */
+html.dark-mode .legalease-login-btn {
+    color: #FFFFFF !important;
+    background-color: #4A7DB3 !important;
+    border-color: #4A7DB3 !important;
+}
+
+html.dark-mode .legalease-dashboard-btn {
+    color: #8FB6DD !important;
+    background-color: transparent !important;
+    border-color: #4A7DB3 !important;
+}
+
+html.dark-mode .legalease-dashboard-btn:hover {
+    color: #FFFFFF !important;
+    background-color: #4A7DB3 !important;
+}
+
+/* Keep Home 2's action buttons consistent across sections. */
+.legalease-home2-hero-primary,
+.legalease-home2-hero-secondary,
+.legalease-home2-guided-button,
+.legalease-home2-security-button,
+.legalease-home2-workspace-button,
+.legalease-home2-confidence-button {
+    min-height: 49px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.legalease-home2-hero-primary,
+.legalease-home2-guided-button,
+.legalease-home2-security-button,
+.legalease-home2-workspace-button,
+.legalease-home2-confidence-button {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.legalease-home2-hero-primary:hover,
+.legalease-home2-guided-button:hover,
+.legalease-home2-security-button:hover,
+.legalease-home2-workspace-button:hover,
+.legalease-home2-confidence-button:hover {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+.legalease-home2-hero-secondary {
+    color: var(--white-color);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.legalease-home2-hero-secondary:hover {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border-color: var(--white-color);
+}
+
+html.dark-mode .legalease-home2-hero-primary,
+html.dark-mode .legalease-home2-guided-button,
+html.dark-mode .legalease-home2-security-button,
+html.dark-mode .legalease-home2-workspace-button,
+html.dark-mode .legalease-home2-confidence-button {
+    color: #FFFFFF !important;
+    background-color: #4A7DB3 !important;
+    border-color: #4A7DB3 !important;
+}
+
+html.dark-mode .legalease-home2-hero-primary:hover,
+html.dark-mode .legalease-home2-guided-button:hover,
+html.dark-mode .legalease-home2-security-button:hover,
+html.dark-mode .legalease-home2-workspace-button:hover,
+html.dark-mode .legalease-home2-confidence-button:hover {
+    color: #FFFFFF !important;
+    background-color: #5A8BC0 !important;
+    border-color: #5A8BC0 !important;
+}
+
+.legalease-home2-security-button,
+.legalease-home2-security-button:hover,
+html.dark-mode .legalease-home2-security-button,
+html.dark-mode .legalease-home2-security-button:hover {
+    border: 1px solid #FFFFFF !important;
+}
+
+/* Home 2 CTA system: one shared size and shape, with filled primary and outlined secondary actions. */
+.legalease-home2-page .legalease-login-btn,
+.legalease-home2-page .legalease-dashboard-btn,
+.legalease-home2-page .legalease-home2-hero-primary,
+.legalease-home2-page .legalease-home2-hero-secondary,
+.legalease-home2-page .legalease-home2-guided-button,
+.legalease-home2-page .legalease-home2-security-button,
+.legalease-home2-page .legalease-home2-workspace-button,
+.legalease-home2-page .legalease-home2-confidence-button,
+.legalease-home2-page .legalease-home2-final-cta-primary,
+.legalease-home2-page .legalease-home2-final-cta-secondary,
+.legalease-home2-page .legalease-home2-process-cta a,
+.legalease-home2-page .legalease-footer-cta {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 49px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.legalease-home2-page .legalease-login-btn,
+.legalease-home2-page .legalease-home2-hero-primary,
+.legalease-home2-page .legalease-home2-guided-button,
+.legalease-home2-page .legalease-home2-workspace-button,
+.legalease-home2-page .legalease-home2-confidence-button,
+.legalease-home2-page .legalease-home2-final-cta-primary,
+.legalease-home2-page .legalease-home2-process-cta a,
+.legalease-home2-page .legalease-footer-cta {
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.legalease-home2-page .legalease-dashboard-btn {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+.legalease-home2-page .legalease-home2-hero-secondary,
+.legalease-home2-page .legalease-home2-security-button,
+.legalease-home2-page .legalease-home2-final-cta-secondary {
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+}
+
+.legalease-home2-page .legalease-login-btn:hover,
+.legalease-home2-page .legalease-home2-hero-primary:hover,
+.legalease-home2-page .legalease-home2-guided-button:hover,
+.legalease-home2-page .legalease-home2-workspace-button:hover,
+.legalease-home2-page .legalease-home2-confidence-button:hover,
+.legalease-home2-page .legalease-home2-final-cta-primary:hover,
+.legalease-home2-page .legalease-home2-process-cta a:hover,
+.legalease-home2-page .legalease-footer-cta:hover {
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    filter: brightness(1.08);
+}
+
+.legalease-home2-page .legalease-dashboard-btn:hover {
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.legalease-home2-page .legalease-home2-hero-secondary:hover,
+.legalease-home2-page .legalease-home2-security-button:hover,
+.legalease-home2-page .legalease-home2-final-cta-secondary:hover {
+    color: var(--primary-color);
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+html.dark-mode .legalease-home2-page .legalease-login-btn,
+html.dark-mode .legalease-home2-page .legalease-home2-hero-primary,
+html.dark-mode .legalease-home2-page .legalease-home2-guided-button,
+html.dark-mode .legalease-home2-page .legalease-home2-workspace-button,
+html.dark-mode .legalease-home2-page .legalease-home2-confidence-button,
+html.dark-mode .legalease-home2-page .legalease-home2-final-cta-primary,
+html.dark-mode .legalease-home2-page .legalease-home2-process-cta a,
+html.dark-mode .legalease-home2-page .legalease-footer-cta {
+    color: #FFFFFF !important;
+    background-color: #4A7DB3 !important;
+    border-color: #4A7DB3 !important;
+}
+
+html.dark-mode .legalease-home2-page .legalease-dashboard-btn {
+    color: #8FB6DD !important;
+    background-color: transparent !important;
+    border-color: #4A7DB3 !important;
+}
+
+html.dark-mode .legalease-home2-page .legalease-home2-hero-secondary,
+html.dark-mode .legalease-home2-page .legalease-home2-security-button,
+html.dark-mode .legalease-home2-page .legalease-home2-final-cta-secondary {
+    color: #FFFFFF !important;
+    background-color: transparent !important;
+    border-color: #FFFFFF !important;
+}
+
+html.dark-mode .legalease-home2-page .legalease-login-btn:hover,
+html.dark-mode .legalease-home2-page .legalease-home2-hero-primary:hover,
+html.dark-mode .legalease-home2-page .legalease-home2-guided-button:hover,
+html.dark-mode .legalease-home2-page .legalease-home2-workspace-button:hover,
+html.dark-mode .legalease-home2-page .legalease-home2-confidence-button:hover,
+html.dark-mode .legalease-home2-page .legalease-home2-final-cta-primary:hover,
+html.dark-mode .legalease-home2-page .legalease-home2-process-cta a:hover,
+html.dark-mode .legalease-home2-page .legalease-footer-cta:hover {
+    color: #FFFFFF !important;
+    background-color: #5A8BC0 !important;
+    border-color: #5A8BC0 !important;
+}
+
+html.dark-mode .legalease-home2-page .legalease-dashboard-btn:hover {
+    color: #FFFFFF !important;
+    background-color: #4A7DB3 !important;
+    border-color: #4A7DB3 !important;
+}
+
+html.dark-mode .legalease-home2-page .legalease-home2-hero-secondary:hover,
+html.dark-mode .legalease-home2-page .legalease-home2-security-button:hover,
+html.dark-mode .legalease-home2-page .legalease-home2-final-cta-secondary:hover {
+    color: #172A46 !important;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+.legalease-home2-page .legalease-home2-final-cta-primary,
+.legalease-home2-page .legalease-home2-final-cta-primary:hover {
+    border: 1px solid #FFFFFF !important;
+}
+
+/* Align all four Home 2 header controls to the same compact height. */
+.legalease-home2-page .legalease-desktop-actions .legalease-header-toggle,
+.legalease-home2-page .legalease-desktop-actions .legalease-login-btn,
+.legalease-home2-page .legalease-desktop-actions .legalease-dashboard-btn,
+.legalease-home2-page .legalease-mobile-actions .legalease-action-btn,
+.legalease-home2-page .legalease-mobile-actions .legalease-login-btn,
+.legalease-home2-page .legalease-mobile-actions .legalease-dashboard-btn {
+    box-sizing: border-box;
+    height: 44px;
+    min-height: 44px;
+}
+
+.legalease-home2-page .legalease-desktop-actions .legalease-header-toggle {
+    width: 44px;
+    padding: 0;
+}
+
+.legalease-home2-page .legalease-desktop-actions .legalease-login-btn,
+.legalease-home2-page .legalease-desktop-actions .legalease-dashboard-btn {
+    padding: 6px 16px;
 }
